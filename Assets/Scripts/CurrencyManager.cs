@@ -5,7 +5,7 @@ using UnityEngine;
 public class CurrencyManager : MonoBehaviour
 {
 
-    public static int playerCurrentCurrency;
+    public int playerCurrentCurrency;
     [SerializeField] int startingCurrency = 500;
     public static CurrencyManager instance;
     void Awake()
@@ -33,9 +33,11 @@ public class CurrencyManager : MonoBehaviour
         // Subtract money and return a bool if player can afford.
         if (playerCurrentCurrency - currencyToSubtract < 0)
         {
+            Debug.Log("Dont Subtract Currency");
             return false;
         } else
         {
+            Debug.Log("Subtract Currency");
             playerCurrentCurrency -= currencyToSubtract;
             return true;
         }
@@ -43,7 +45,7 @@ public class CurrencyManager : MonoBehaviour
     public bool CanPlayerAfford(int currencyToCheck)
     {
         // Returns a bool if the player can afford 
-        if (playerCurrentCurrency <= currencyToCheck)
+        if (playerCurrentCurrency < currencyToCheck)
         {
             return false;
         }

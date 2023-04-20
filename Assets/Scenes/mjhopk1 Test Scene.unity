@@ -235,6 +235,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5924106342204536963, guid: 8bd520c764cc3944d8c8afb3b1b31a67, type: 3}
+      propertyPath: startingCurrency
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bd520c764cc3944d8c8afb3b1b31a67, type: 3}
 --- !u!1001 &435830613
@@ -698,7 +702,7 @@ PrefabInstance:
     - target: {fileID: 4755480526224379667, guid: d235d29d4b1f52140ad9eb02b12a4ff5, type: 3}
       propertyPath: tower
       value: 
-      objectReference: {fileID: 7242737977702516629, guid: d71ca1382d30a9b4781d30bce56c2890, type: 3}
+      objectReference: {fileID: 4968962551966464908, guid: 3e4529658e7554a48a35edc203ca2047, type: 3}
     - target: {fileID: 4755480526224379667, guid: d235d29d4b1f52140ad9eb02b12a4ff5, type: 3}
       propertyPath: GroundEnemyprefab
       value: 

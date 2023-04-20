@@ -46,6 +46,7 @@ public class SpaceInteract : MonoBehaviour
         //Sell a turret
         if (currentState.state == 2 & GetComponent<TowerHealth>()!=null)
         {
+            BuildManager.instance.SetCondition(0);
             Destroy(gameObject);
         }
     }
@@ -54,11 +55,13 @@ public class SpaceInteract : MonoBehaviour
     {
         BuildManager.instance.SetCondition(1);
 
-        Debug.Log("Tower");
+        Debug.Log("On Tower");
     }
 
     void OnMouseExit ()
     {
         BuildManager.instance.SetCondition(0);
+
+        Debug.Log("Not on Tower");
     }
 }

@@ -5,9 +5,10 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     public Transform enemyPrefab;
-    public GameObject enemySpawn;
+    private GameObject enemySpawn;
     public float timeBetweenWaves;
     public float countdown;
+    public int waveAmount;
     public int[] northArr;
     public int[] southArr;
     public int[] eastArr;
@@ -16,11 +17,12 @@ public class EnemyController : MonoBehaviour
     public int[] northWestArr;
     public int[] southEastArr;
     public int[] southWestArr;
-    public int waveAmount;
+    public List<WaveInfo> testList = new List<WaveInfo>();
     private int waveNumber = 1;
     private int index = 0;
 
-
+    /*TO DO: 
+     Array of objects containing enemy type, amount spawn, cool down of spawn*/
 
 
     /*NOTES FROM CODY!
@@ -37,18 +39,11 @@ public class EnemyController : MonoBehaviour
      
      */
 
-    /*private void Start()
-    {
-        northArr = new int[waveAmount];
-        southArr = new int[waveAmount];
-        eastArr = new int[waveAmount];
-        westArr = new int[waveAmount];
-        northEastArr = new int[waveAmount];
-        northWestArr = new int[waveAmount];
-        southEastArr = new int[waveAmount];
-        southWestArr = new int[waveAmount];
-    }*/
 
+
+    /*Leave enemy spawn prefab set to none on enemy controller object*/
+
+    
 
     void Update()
     {
@@ -72,10 +67,15 @@ public class EnemyController : MonoBehaviour
         Debug.Log("Wave " + waveNumber);
 
         GameObject.Find("SoundController").GetComponent<Sound>().SpawnSound("WaveIncoming");
-        SpawnEnemy(1, northArr[index]);
-        SpawnEnemy(2, southArr[index]);
-        SpawnEnemy(3, eastArr[index]);
-        SpawnEnemy(4, westArr[index]);
+        //SpawnEnemy(1, northArr[index]);
+        //SpawnEnemy(2, southArr[index]);
+        //SpawnEnemy(3, eastArr[index]);
+        //SpawnEnemy(4, westArr[index]);
+        //SpawnEnemy(5, northEastArr[index]);
+        //SpawnEnemy(6, northWestArr[index]);
+        //SpawnEnemy(7, southEastArr[index]);
+        //SpawnEnemy(8, southWestArr[index]);
+        ListSpawn();
         waveNumber++;
         index++;
         //Wait 0.5 seconds before spawning next enemy
@@ -168,10 +168,14 @@ public class EnemyController : MonoBehaviour
                 Debug.Log("Spawn Enemy");
                 break;
         }
-
-
-
         //Instantiate(enemyPrefab, enemySpawn.transform.position, enemySpawn.transform.rotation);
         Debug.Log("Spawn Enemy");
     }
+
+    void ListSpawn()
+    {
+        Instantiate(testList[1].enemyPrefab, testList[1].spawnPoint.transform.position, testList[1].spawnPoint.transform.rotation);
+    }
+
+
 }

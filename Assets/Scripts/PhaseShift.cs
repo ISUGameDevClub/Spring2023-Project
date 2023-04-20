@@ -8,6 +8,7 @@ public class PhaseShift : MonoBehaviour
     public bool activePhase; //True if in active phase, False if in setup
     public bool enemiesRemain; //True if there are still enemies, false if there are no enemies
     public bool skip; //True if skip setup button is pressed, false otherwise
+    public int numberOfEnemies;
     [SerializeField] float setupTime;
     
 
@@ -15,27 +16,34 @@ public class PhaseShift : MonoBehaviour
     void Start()
     {
         activePhase = false;    //Start in setup phase im guessing...
-        setupTime = 40; //Random value for testing
+        enemiesRemain = true;
+        setupTime = 5; //Random value for testing
         StartCoroutine(setupWait());
     }
 
     // Update is called once per frame
     void Update()
     {
-         if(skip && (activePhase == false))
+        
+        //Use a try that looks for gameobject of type "enemy"
+
+
+        if (skip && (activePhase == false))
          {
+              enemiesRemain = true;
               activePhase = true;
-              setupTime = 100;
-              StartCoroutine(setupWait());
               skip = false;
          }
                
         if (activePhase)
         {
-            if(!enemiesRemain)
+            if (GameObject.FindGameObjectsWithTag("Enemy/Ground").Length == 0)
+            {
+                enemiesRemain = false;
+            }
+            if (!enemiesRemain)
             {
                 activePhase = false;
-                setupTime = 100;
                 StartCoroutine(setupWait());
             }
         }
@@ -48,6 +56,7 @@ public class PhaseShift : MonoBehaviour
     {
         yield return new WaitForSeconds(setupTime);
         activePhase = true;
+        enemiesRemain = true;
         
     }
     public void skipPhase()

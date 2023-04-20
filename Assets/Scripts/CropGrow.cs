@@ -4,20 +4,41 @@ using UnityEngine;
 
 public class CropGrow : MonoBehaviour
 {
-    public float growRate = 10;
+    public float growTime = 10;
+    private float growRate = 0;
     [SerializeField] Sprite[] growStageSprites;
     float plantStageTimer = 0;
     bool cropIsFull = false;
     int cropStages;
     int currentStage = -1;
+    [SerializeField] cropEffect cropPickupEffect;
+    [SerializeField] int healthValue = 0;
+    [SerializeField] int moneyValue = 0;
+    [SerializeField] bool regrowable;
+    [SerializeField] int plantHealth = 0;
+    private bool canTakeDamage = false;
+    private Sprite seedSprite;
+    private CurrencyManager currencyManager;
+    enum cropEffect
+    {
+        money,
+        health
+    }
     // Start is called before the first frame update
     void Start()
     {
+        currencyManager = FindObjectOfType<CurrencyManager>();
+        seedSprite = GetComponent<SpriteRenderer>().sprite;
         if(growStageSprites.Length <= 0)
         {
             Debug.LogError("Crop does not have any grow stages in its array (Check Grow Stage Sprites)");
         }
         cropStages = growStageSprites.Length;
+        growRate = growTime / growStageSprites.Length;
+        if (plantHealth != 0)
+        {
+            canTakeDamage = true;
+        }
     }
 
     // Update is called once per frame
@@ -37,11 +58,35 @@ public class CropGrow : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.name);
         if (collision.GetComponent<PlayerHealth>() && (cropIsFull))
         {
-            //Give player Money Here
-            Destroy(this.gameObject);
+            switch (cropPickupEffect)
+            {
+                case cropEffect.money:
+                    //currencyManager.AddCurrency(moneyValue);
+                    break;
+                case cropEffect.health:
+                    collision.GetComponent<PlayerHealth>().gainHealth(healthValue);
+                    break;
+            }
+            if (regrowable)
+            {
+                plantStageTimer = 0;
+                currentStage = -1;
+                gameObject.GetComponent<SpriteRenderer>().sprite = seedSprite;
+                cropIsFull = false;
+            } else
+            {
+                Destroy(this.gameObject);
+            }
+        }
+        if (collision.GetComponent<EnemyHealth>() && canTakeDamage)
+        {
+            plantHealth--;
+            if (plantHealth <= 0)
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 }

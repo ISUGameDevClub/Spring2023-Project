@@ -6,18 +6,18 @@ using TMPro;
 
 public class PhaseUI : MonoBehaviour
 {
-    public static bool isSetupPhase = true;
-    
+    public int enemRemain;
     public TextMeshProUGUI currentPhaseText;
 
     // Update is called once per frame
     void Update()
     {
-        if(GameObject.Find("phase").GetComponent<PhaseShift>().isActivePhase())
+        if (GameObject.Find("phase").GetComponent<PhaseShift>().isActivePhase())
             currentPhaseText.SetText("Active"); 
         else
         {
             currentPhaseText.SetText("Setup");
         }
+        
     }
 }

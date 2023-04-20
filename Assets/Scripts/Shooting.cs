@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class Shooting : MonoBehaviour
 {
@@ -25,6 +26,10 @@ public class Shooting : MonoBehaviour
                 canFire = false;
                 StartCoroutine(fireWait());
             }
+    }
+    void Attack()
+    {
+
     }
     void Shoot()
     {

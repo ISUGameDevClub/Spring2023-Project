@@ -9,6 +9,10 @@ public class BuildManager : MonoBehaviour
 
     StateController currentState;
 
+    CurrencyManager purchase;
+
+    int towerPrice = 50;
+
     int currentCondition;
 
     public GameObject tower;
@@ -51,6 +55,8 @@ public class BuildManager : MonoBehaviour
         currentState = GameObject.Find("GameManager").GetComponent<StateController>();
 
         currentCondition = 0;
+
+        purchase = GameObject.Find("GameManager").GetComponent<CurrencyManager>();
     }
 
     public GameObject GroundEnemyprefab;
@@ -74,7 +80,7 @@ public class BuildManager : MonoBehaviour
     }
     void Update()
     {   
-        if (Input.GetMouseButtonDown(0) && currentState!=null && currentState.state == 1 && currentCondition == 0)
+        if (Input.GetMouseButtonDown(0) && currentState!=null && currentState.state == 1 && currentCondition == 0 && purchase.CanPlayerAfford(towerPrice) == true)
         {
             GameObject.Find("SoundController").GetComponent<Sound>().SpawnSound("TowerPlace1");
             Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

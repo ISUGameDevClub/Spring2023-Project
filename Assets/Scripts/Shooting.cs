@@ -37,7 +37,7 @@ public class Shooting : MonoBehaviour
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(FirePoint.up * bulletForce, ForceMode2D.Impulse);
         //if (GetComponent<Sound>()) { 
-        GameObject.Find("SoundController").GetComponent<Sound>().SpawnSound("Shoot");
+        GameObject.Find("SoundController").GetComponent<Sound>().SpawnSound("PitchforkThrow");
         /*}
         else
         {

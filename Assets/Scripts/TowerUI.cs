@@ -22,7 +22,6 @@ public class TowerUI : MonoBehaviour
     void Update()
     {
         //if build mode is active, instantiate the tower bar animation and pull it up
-
         if (buildMode == true || Input.GetKeyDown(KeyCode.Alpha1))
         {
             towerBar.gameObject.SetActive(true);
@@ -33,8 +32,25 @@ public class TowerUI : MonoBehaviour
         }
 
         //if towerSelector is equal to any of the towers corresponding numbers, switch the highlighted/selected tower
+        if (towerSelector>=0 && towerSelector<=5) 
+        { 
+            highlight.transform.position = outlineLocations[towerSelector].transform.position;
+        }
+        else
+        {
+            if (scrollSum > 5)
+            {
+                scrollSum = 0;
+            }
 
-        highlight.transform.position = outlineLocations[towerSelector].transform.position;
+            if (scrollSum < 0)
+            {
+                scrollSum = 5;
+            }
+        }
+        scrollSum = towerSelector;
+        scrollSum -= Input.mouseScrollDelta.y;
+        towerSelector = (int)Mathf.Round(scrollSum);
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
@@ -60,21 +76,5 @@ public class TowerUI : MonoBehaviour
         {
             towerSelector = 5;
         }
-
-        scrollSum = towerSelector;
-
-        if (scrollSum > 5)
-        {
-            scrollSum = 5;
-        }
-
-        if (scrollSum < 0)
-        {
-            scrollSum = 0;
-        }
-
-        scrollSum -= Input.mouseScrollDelta.y;
-        towerSelector = (int)Mathf.Round(scrollSum);
-        
     }
 }

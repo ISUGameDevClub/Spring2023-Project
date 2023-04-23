@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 lastDirection;
     private float timePass = 0;
     private float currentSpeed;
+    private float timeSound = 0;
     
     Rigidbody2D rb;
     Vector2 direction;
@@ -36,6 +37,15 @@ public class PlayerMovement : MonoBehaviour
             currentSpeed = Mathf.Lerp(0, 4, heightT);
             lastDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
             direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+            if(timeSound <= 0)
+            {
+                GameObject.Find("SoundController").GetComponent<Sound>().SpawnSound("Footsteps2");
+                timeSound = 1f;
+            }
+            else
+            {
+                timeSound -= Time.deltaTime;
+            }
         }
         else
         {

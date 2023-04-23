@@ -57,14 +57,7 @@ public class BuildManager : MonoBehaviour
         currentCondition = 0;
 
         purchase = GameObject.Find("GameManager").GetComponent<CurrencyManager>();
-    }
-
-    public GameObject GroundEnemyprefab;
-    public GameObject SpinnyEnemyprefab;
-
-    private void Start()
-    {
-        TurretToBuild = GroundEnemyprefab;
+        Debug.Log("Currency Manager present");
     }
 
     private GameObject TurretToBuild;
@@ -82,9 +75,10 @@ public class BuildManager : MonoBehaviour
     {   
         if (Input.GetMouseButtonDown(0) && currentState!=null && currentState.state == 1 && currentCondition == 0 && purchase.CanPlayerAfford(towerPrice) == true)
         {
-            GameObject.Find("SoundController").GetComponent<Sound>().SpawnSound("TowerPlace1");
+            GameObject.Find("SoundController").GetComponent<Sound>().SpawnSound("TowerPlace1"); 
             Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Instantiate(tower, pos, Quaternion.identity);
+            purchase.SubtractCurrency(towerPrice);
         }
     }
 }

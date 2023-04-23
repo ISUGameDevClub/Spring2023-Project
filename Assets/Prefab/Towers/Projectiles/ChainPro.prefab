@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 183c23a6570f68942959bb3aee425ae8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 0.5
   attackRange: 1
   projectilePrefab: {fileID: 0}
   fireOrigin: {fileID: 0}

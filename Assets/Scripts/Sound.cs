@@ -123,7 +123,7 @@ public class Sound : MonoBehaviour
                 Destroy(soldierDeath, DestroyTime);
                 break;
             case "Stephen_Death_8Bit": //
-                GameObject stephenDeath8Bit = Instantiate(stephenDeath8BitPrefab);
+                GameObject stephenDeath8Bit = Instantiate(StephenDeath8BitPrefab);
                 Destroy(stephenDeath8Bit, DestroyTime);
                 break;
         }

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -17,7 +16,6 @@ public class PhaseShift : MonoBehaviour
     {
         activePhase = false;    //Start in setup phase im guessing...
         enemiesRemain = true;
-        setupTime = 5; //Random value for testing
         StartCoroutine(setupWait());
     }
 
@@ -27,7 +25,7 @@ public class PhaseShift : MonoBehaviour
         
         //Use a try that looks for gameobject of type "enemy"
 
-
+        //Testing if skip button is pressed during setup phase
         if (skip && (activePhase == false))
          {
               enemiesRemain = true;
@@ -39,13 +37,10 @@ public class PhaseShift : MonoBehaviour
         {
             if (GameObject.FindGameObjectsWithTag("Enemy/Ground").Length == 0)
             {
-                enemiesRemain = false;
-            }
-            if (!enemiesRemain)
-            {
                 activePhase = false;
                 StartCoroutine(setupWait());
             }
+            
         }
     }
     public bool isActivePhase()

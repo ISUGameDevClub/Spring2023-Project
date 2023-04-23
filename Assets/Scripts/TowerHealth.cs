@@ -21,9 +21,8 @@ public class TowerHealth : MonoBehaviour
         health = health + heal;
     }
 
-    public void levelUpHealth()
+    public void levelUpHealth(int inhealth)
     {
-        int currDamage = gameObject.GetComponent<Upgrades>().getHealth() - gameObject.GetComponent<Upgrades>().getPrevHealth();
-        health = gameObject.GetComponent<Upgrades>().getHealth() - currDamage;
+        health = inhealth;
     }
 }

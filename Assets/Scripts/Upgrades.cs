@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 
 public class Upgrades : MonoBehaviour
@@ -10,9 +11,11 @@ public class Upgrades : MonoBehaviour
     [SerializeField] int curr_level = 0;
     [SerializeField] int[] health;
     [SerializeField] int[] attack;
-    [SerializeField] int[] attackRate;
+    [SerializeField] float[] attackRate;
     [SerializeField] int[] range;
     [SerializeField] int[] upgradeCost;
+    [SerializeField] GameObject text; // Assign the FloatingText Prefab Here
+    private CurrencyManager curManager;
     /// /////////////////////////////////////////////////
         // Code for testing remove before normal use.
     private bool canFire;
@@ -22,26 +25,12 @@ public class Upgrades : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        curManager = CurrencyManager.instance;
         /// /////////////////////////////////////////////////
         // Code for testing remove before normal use.
         canFire = true;
         booletcooldown = 1;
         /// /////////////////////////////////////////////////
-        health = new int[max_level];
-        attack = new int[max_level];
-        attackRate = new int[max_level];
-        range = new int[max_level];
-        upgradeCost = new int[max_level];
-
-        for (int x = 0; x < max_level; x++ )
-        {
-            //Set stat arrays to 0, they'll be filled later.
-            health[x] = 0;
-            attack[x] = 0;
-            attackRate[x] = 0;
-            range[x] = 0;
-            upgradeCost[x] = 0;
-        }
     }
   
     /// /////////////////////////////////////////////////
@@ -66,11 +55,29 @@ public class Upgrades : MonoBehaviour
 
     public void levelUp()
     {
-        if(CurrencyManager.instance.SubtractCurrency(upgradeCost[curr_level]) 
-            && curr_level < max_level-1 )
+        if(curr_level < max_level - 1 && curManager.CanPlayerAfford(upgradeCost[curr_level]))
         {
+            var textspawn = Instantiate(text, gameObject.transform.position, gameObject.transform.rotation, GameObject.FindGameObjectWithTag("FXCanvas").transform);
+            Destroy(textspawn, 2f);
+            curManager.SubtractCurrency(upgradeCost[curr_level]);
             curr_level++;
-            gameObject.GetComponent<TowerHealth>().levelUpHealth();
+            textspawn.transform.Find("Floating Currency").GetComponent<TMP_Text>().text = "LEVEL UP to " + (curr_level + 1) + "/" + max_level;
+            gameObject.GetComponent<TowerHealth>().levelUpHealth(health[curr_level]);
+            GetComponent<TowerAttack>().UpgradeAttackDamage(attack[curr_level]);
+            GetComponent<TowerAttack>().UpgradeRange(range[curr_level]);
+            GetComponent<TowerAttack>().UpgradeAttackSpeed(attackRate[curr_level]);
+        } else if (curr_level >= max_level - 1)
+        {
+            var textspawn = Instantiate(text, gameObject.transform.position, gameObject.transform.rotation, GameObject.FindGameObjectWithTag("FXCanvas").transform);
+            textspawn.transform.Find("Floating Currency").GetComponent<TMP_Text>().text = "Tower At Max Level!";
+            Destroy(textspawn, 2f);
+        }
+        else
+        {
+            var textspawn = Instantiate(text, gameObject.transform.position, gameObject.transform.rotation, GameObject.FindGameObjectWithTag("FXCanvas").transform);
+            textspawn.transform.Find("Floating Currency").GetComponent<TMP_Text>().text = "Not Enough Currency To Upgrade!";
+            textspawn.transform.Find("Floating Currency").GetComponent<TMP_Text>().color = new Color(1,0,0,1);
+            Destroy(textspawn, 2f);
         }
     }
     public int getCurrentLevel()
@@ -92,11 +99,11 @@ public class Upgrades : MonoBehaviour
     {
         return attack[curr_level];
     }
-    public int getAttackRate()
+    public float getAttackRate()
     {
         return attackRate[curr_level];
     }
-    public int getRange()
+    public float getRange()
     {
         return range[curr_level];
     }

@@ -93,4 +93,18 @@ public class TowerAttack : MonoBehaviour
         yield return new WaitForSeconds(towerAttackSpeed);
         attackCoroutineRunning = false;
     }
+    public void UpgradeAttackSpeed(float speed)
+    {
+        towerAttackSpeed = speed;
+    }
+
+    public void UpgradeAttackDamage(int damage)
+    {
+        attackDamage = damage;
+    }
+
+    public void UpgradeRange(int range)
+    {
+        transform.Find("attackRange").GetComponent<CircleCollider2D>().radius = range;
+    }
 }

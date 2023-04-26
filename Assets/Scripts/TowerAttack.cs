@@ -5,6 +5,8 @@ using System.Linq;
 
 public class TowerAttack : MonoBehaviour
 {
+    private Animator towerAnims;
+
     public float towerAttackSpeed;
     private List<Collider2D> collidersInside = new List<Collider2D>();
     [Header("Bullets")]
@@ -22,7 +24,12 @@ public class TowerAttack : MonoBehaviour
         poison
     }
 
-     // Update is called once per frame
+    private void Start()
+    {
+        towerAnims = GetComponentInChildren<Animator>();
+    }
+
+    // Update is called once per frame
     void Update()
     {
         // This function will fire a Prefab at the direction of a target within its collider.
@@ -58,6 +65,7 @@ public class TowerAttack : MonoBehaviour
         Debug.Log(towerType);
         if (target.Any(item => item.GetComponent<EnemyHealth>()))
         {
+            towerAnims.SetTrigger("attack");
             GameObject projectile;
             // Gets the first object with the tag of Tower, no matter what postion it is from the array.
             Vector3 vectorToTarget = target[target.IndexOf(target.Where(x => x.tag == "Enemy/Ground").FirstOrDefault())].transform.position - transform.position;

@@ -5,6 +5,8 @@ using UnityEngine.Animations;
 
 public class Shooting : MonoBehaviour
 {
+    private Animator playerAnims;
+
     public Transform FirePoint;
     public GameObject BulletPrefab;
 
@@ -15,6 +17,7 @@ public class Shooting : MonoBehaviour
     void Start()
     {
         canFire = true;
+        playerAnims = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -33,6 +36,8 @@ public class Shooting : MonoBehaviour
     }
     void Shoot()
     {
+        playerAnims.SetTrigger("attack");
+
         GameObject bullet = Instantiate(BulletPrefab, FirePoint.position, FirePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(FirePoint.up * bulletForce, ForceMode2D.Impulse);

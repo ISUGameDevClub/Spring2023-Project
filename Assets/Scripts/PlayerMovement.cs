@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    //Animations
+    private Animator playerAnims;
+
     // Player smoothing
     [SerializeField] float speed;
     [SerializeField] AnimationCurve acceleration;
@@ -21,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        playerAnims = GetComponentInChildren<Animator>();
     }
     // Update is called once per frame
     private void Update()
@@ -28,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
         // Run when any of the direction keys are pressed
         if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
         {
+            playerAnims.SetBool("walk", true);
             // Store the last direction the player was moving
             lastDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
             // Accelerate player
@@ -49,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            playerAnims.SetBool("walk", false);
             // Make sure that time is not over the deceleration duration
             if (timePass > decelerationDuration)
             {

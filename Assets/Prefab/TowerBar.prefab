@@ -524,6 +524,13 @@ MonoBehaviour:
   - {fileID: 2192391986468189676}
   - {fileID: 2192391986126961629}
   highlight: {fileID: 2192391985646770276}
+  scrollSum: 0
+  towerPrefabs:
+  - {fileID: 7242737977702516629, guid: d71ca1382d30a9b4781d30bce56c2890, type: 3}
+  - {fileID: 5840964408827577268, guid: ff3f61fb5d450fd449de0d2aecd3ccc7, type: 3}
+  - {fileID: 4968962551966464908, guid: 3e4529658e7554a48a35edc203ca2047, type: 3}
+  - {fileID: 2511340583881408485, guid: 83924fc368b176b4a8415e741b46f08a, type: 3}
+  - {fileID: 2109953095925822425, guid: 1ed773c5598bb2b449fbe1eec5e8ba31, type: 3}
 --- !u!1 &2192391986375114271
 GameObject:
   m_ObjectHideFlags: 0

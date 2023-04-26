@@ -111,6 +111,7 @@ GameObject:
   - component: {fileID: 7242737977702516634}
   - component: {fileID: 8357451283412925866}
   - component: {fileID: -8095908985379287697}
+  - component: {fileID: 2528218581525876817}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Tower
@@ -275,5 +276,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerAttackSpeed: 1
   projectilePrefab: {fileID: 1868895473673010215, guid: 4f6d4ba7dea0c6241a83486f1251c3a2, type: 3}
+  chainProjectilePrefab: {fileID: 0}
   attackDamage: 25
-  towerType: standard
+  towerType: 0
+--- !u!114 &2528218581525876817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7242737977702516629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f4c46766db618d48aa7260ac5cbbd73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  costInfo: {fileID: 11400000, guid: 9eda06abace12784dbcd57c10fce71f3, type: 2}

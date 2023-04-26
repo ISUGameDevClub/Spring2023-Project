@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2511340583881408490}
   - component: {fileID: 3864911516830582234}
   - component: {fileID: 5331347776207222047}
+  - component: {fileID: 1506972406701256892}
   m_Layer: 0
   m_Name: Chain Tower
   m_TagString: Tower
@@ -181,6 +182,19 @@ MonoBehaviour:
   chainProjectilePrefab: {fileID: 1228929761512374194, guid: 67864ac53653456448dd6e5957e6887b, type: 3}
   attackDamage: 10
   towerType: 1
+--- !u!114 &1506972406701256892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2511340583881408485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f4c46766db618d48aa7260ac5cbbd73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  costInfo: {fileID: 11400000, guid: 9f9c03b86677a7a46a998f48763ad72a, type: 2}
 --- !u!1 &6472977521326708335
 GameObject:
   m_ObjectHideFlags: 0

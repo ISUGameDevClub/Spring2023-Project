@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2109953095925822422}
   - component: {fileID: 734352072981465574}
   - component: {fileID: 8534001695515441443}
+  - component: {fileID: -2396385069299387524}
   m_Layer: 0
   m_Name: PoisonTower
   m_TagString: Tower
@@ -181,6 +182,19 @@ MonoBehaviour:
   chainProjectilePrefab: {fileID: 0}
   attackDamage: 10
   towerType: 4
+--- !u!114 &-2396385069299387524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109953095925822425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f4c46766db618d48aa7260ac5cbbd73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  costInfo: {fileID: 11400000, guid: 4aa7a50dcef03ca42bad5d328dc2003e, type: 2}
 --- !u!1 &7369787981561158227
 GameObject:
   m_ObjectHideFlags: 0

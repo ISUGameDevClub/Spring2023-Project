@@ -63,6 +63,7 @@ GameObject:
   - component: {fileID: 5840964408827577275}
   - component: {fileID: 5077729786145225099}
   - component: {fileID: 4191044017003006286}
+  - component: {fileID: 8975797925218310313}
   m_Layer: 0
   m_Name: ShotgunTower
   m_TagString: Untagged
@@ -211,6 +212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0, g: 0.16181755, b: 1, a: 0}
+  condition: 0
 --- !u!114 &4191044017003006286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,5 +227,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerAttackSpeed: 1
   projectilePrefab: {fileID: 6434496924394768136, guid: 0831603921a23c54786f54b69427d744, type: 3}
+  chainProjectilePrefab: {fileID: 0}
   attackDamage: 10
-  towerType: shotgun
+  towerType: 0
+--- !u!114 &8975797925218310313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5840964408827577268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f4c46766db618d48aa7260ac5cbbd73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  costInfo: {fileID: 11400000, guid: f3583c0e63d8fe8499b1502abe8b3b27, type: 2}

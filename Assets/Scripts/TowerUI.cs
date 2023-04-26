@@ -10,6 +10,13 @@ public class TowerUI : MonoBehaviour
     public GameObject[] outlineLocations;
     public GameObject highlight;
     public float scrollSum;
+    public GameObject[] towerPrefabs;
+
+    // Meant to be used by the BuildManager to figure out which tower the player wants to build.
+    public GameObject getHoveredTower()
+    {
+        return towerPrefabs[towerSelector];
+    }
 
 
     // Start is called before the first frame update

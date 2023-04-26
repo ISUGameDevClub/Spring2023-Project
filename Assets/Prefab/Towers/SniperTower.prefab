@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 6020665527287464371}
   - component: {fileID: 3446273407124926838}
   - component: {fileID: 7815940876562680098}
+  - component: {fileID: -6516730082209138345}
   m_Layer: 0
   m_Name: SniperTower
   m_TagString: Tower
@@ -252,6 +253,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.36}
   m_Size: {x: 1.75, y: 3.17}
   m_Direction: 0
+--- !u!114 &-6516730082209138345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4968962551966464908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f4c46766db618d48aa7260ac5cbbd73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  costInfo: {fileID: 11400000, guid: babb6e7921106c146a23ba71c29e33e1, type: 2}
 --- !u!1 &8416358970125311460
 GameObject:
   m_ObjectHideFlags: 0

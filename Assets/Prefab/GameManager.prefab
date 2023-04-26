@@ -58,7 +58,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee2386424dee7db49bec47d835d02b12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingCurrency: 500
+  playerCurrentCurrency: 0
+  startingCurrency: 2000
 --- !u!114 &425471780
 MonoBehaviour:
   m_ObjectHideFlags: 0

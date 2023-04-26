@@ -12,9 +12,17 @@ public class PhaseUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameObject.Find("phase").GetComponent<PhaseShift>().isActivePhase())
+        /*if (GameObject.Find("phase").GetComponent<PhaseShift>().isActivePhase())
             currentPhaseText.SetText("Active"); 
         else
+        {
+            currentPhaseText.SetText("Setup");
+        }*/
+        if (WaveController.instance.isActivePhase())
+        {
+            currentPhaseText.SetText("Active");
+        }
+        else if(WaveController.instance.isSetupPhase())
         {
             currentPhaseText.SetText("Setup");
         }

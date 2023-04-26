@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class WaveController : MonoBehaviour
 {
+    public static WaveController instance;
+
     public int WaveNumber { get; private set; } = 0;
     private bool enemiesSpawned = false;
     private phaseType currentPhaseType;
     public Transform enemyHolder;
+    private bool shouldSkipSetup = false;
 
     public enum phaseType
     {
         SETUP,
         ACTIVE,
+    }
+
+    public bool isSetupPhase()
+    {
+        return currentPhaseType == phaseType.SETUP;
+    }
+
+    public bool isActivePhase()
+    {
+        return currentPhaseType == phaseType.ACTIVE;
     }
 
     public enum spawnLocation { 
@@ -25,8 +38,9 @@ public class WaveController : MonoBehaviour
         WEST,
         NORTHWEST,
     }
-    
-    public Transform northSpawn,northEastSpawn, eastSpawn, southEastSpawn, southSpawn, southWestSpawn, westSpawn, northWestSpawn;
+
+    [SerializeField]
+    private Transform northSpawn,northEastSpawn, eastSpawn, southEastSpawn, southSpawn, southWestSpawn, westSpawn, northWestSpawn;
 
     private Transform getSpawnTransform(spawnLocation location)
     {
@@ -72,8 +86,33 @@ public class WaveController : MonoBehaviour
     private IEnumerator CompleteSetupPhase(int setupIndex)
     {
         currentPhaseType = phaseType.SETUP;
-        yield return new WaitForSeconds(setupTimes[setupIndex]);
+        float setupDuration = setupTimes[setupIndex];
+        
+        const float skipCheckInterval = 0.5f;
+        const float errorMargin = 0.1f;
+        
+        // This probably isn't necessary, but if for whatever reason you had a short setup time or a long skip check interval.
+        // The point of the loop below is to allow the player to skip the setup phase, rather than wait its full duration.
+        if(setupDuration > skipCheckInterval)
+        {
+            float timeElapsed = 0f;
+            float timeToCheck = setupDuration - errorMargin;
+            while (timeElapsed < timeToCheck)
+            {
+                if (shouldSkipSetup) break;
+                yield return new WaitForSeconds(skipCheckInterval);
+                timeElapsed += skipCheckInterval;
+            }
+        }
+        shouldSkipSetup = false;
+        yield return null;
     }
+
+    public void skipSetupPhase()
+    {
+        shouldSkipSetup = true;
+    }
+
     private IEnumerator BeginActivePhase(int waveNumber)
     {
         currentPhaseType = phaseType.ACTIVE;
@@ -90,7 +129,17 @@ public class WaveController : MonoBehaviour
         }
         enemiesSpawned = true;
     }
-
+    private void Awake()
+    {
+        if(instance != null && instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            instance = this;
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -102,11 +151,17 @@ public class WaveController : MonoBehaviour
     void Update()
     {
         // When the last wave has ended, which is when all enemies have died, begin the next wave.
-        // This could potentially/should be changed in the future if possible, I'm checking if all enemies are dead by counting the children of an enemyHolder transform
+        // This could potentially/should be changed in the future, I'm checking if all enemies are dead by counting the children of an enemyHolder transform.
+        // This method could cause issues with the dog enemy. If the dog enemy is the last one to die, then theoretically, it could start the next wave before spawning
+        // the dogs.
         if(enemyHolder.childCount == 0 && enemiesSpawned && WaveNumber < waves.Length)
         {
             enemiesSpawned = false;
             StartCoroutine(beginNextWave());
+        }
+        else if (WaveNumber == waves.Length)
+        {
+            // In this case, the last wave has finished 
         }
     }
 }

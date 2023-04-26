@@ -12,6 +12,8 @@ public class EnemyHealth : MonoBehaviour
         health = health - damage;
         if (health <= 0)
         {
+            EnemyDropScript dropScript = this.GetComponent<EnemyDropScript>();
+            if (dropScript != null) dropScript.dropItems();
             Destroy(gameObject);
         }
     }

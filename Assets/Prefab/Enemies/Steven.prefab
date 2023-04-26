@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 8128330393044297706}
   - component: {fileID: 4120586456026820122}
   - component: {fileID: 4855375040428101046}
+  - component: {fileID: -8241883696069654655}
   m_Layer: 0
   m_Name: Steven
   m_TagString: Enemy/Ground
@@ -296,3 +297,19 @@ MonoBehaviour:
   bufferDistance: 1.2
   maxPlayerFollowRange: 4
   playerIgnoreCooldown: 2
+--- !u!114 &-8241883696069654655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8128330393044297710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 913fe4ffa119b0c438374304292df4c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currencyDropAmount: 75
+  seedDropAmount: 0
+  currencyDropProbability: 1
+  seedDropProbability: 0

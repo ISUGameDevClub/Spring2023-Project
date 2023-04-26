@@ -36,20 +36,9 @@ public class TowerUI : MonoBehaviour
         { 
             highlight.transform.position = outlineLocations[towerSelector].transform.position;
         }
-        else
-        {
-            if (scrollSum > 5)
-            {
-                scrollSum = 0;
-            }
-
-            if (scrollSum < 0)
-            {
-                scrollSum = 5;
-            }
-        }
         scrollSum = towerSelector;
         scrollSum -= Input.mouseScrollDelta.y;
+        scrollSum = Mathf.Clamp(scrollSum, 0f, 5f);
         towerSelector = (int)Mathf.Round(scrollSum);
 
         if (Input.GetKeyDown(KeyCode.Alpha1))

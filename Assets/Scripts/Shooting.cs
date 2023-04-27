@@ -11,6 +11,7 @@ public class Shooting : MonoBehaviour
     public Transform FirePoint;
     public GameObject BulletPrefab;
 
+    GameObject gameManager;
     GameObject soundCont; 
     [SerializeField] float bulletForce;
     [SerializeField] float bulletCooldown;
@@ -18,6 +19,7 @@ public class Shooting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.Find("GameManager");
         soundCont = GameObject.Find("SoundController");
         canFire = true;
         playerAnims = GetComponentInChildren<Animator>();
@@ -26,7 +28,7 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            if (Input.GetButton("Fire1") && canFire)
+            if (Input.GetButton("Fire1") && canFire && gameManager.GetComponent<StateController>().state == 0)
             {
                 Shoot();
                 canFire = false;
@@ -39,6 +41,7 @@ public class Shooting : MonoBehaviour
     }
     void Shoot()
     {
+        
         playerAnims.SetTrigger("attack");
 
         GameObject bullet = Instantiate(BulletPrefab, FirePoint.position, FirePoint.rotation);

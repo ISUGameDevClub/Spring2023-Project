@@ -9,6 +9,7 @@ TagManager:
   - Enemy/Ground
   - Tower
   - FXCanvas
+  - Core
   layers:
   - Default
   - TransparentFX

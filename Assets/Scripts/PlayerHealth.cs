@@ -4,21 +4,22 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    // The player is supposed to share health with the base. See BaseHealthScript.
+    //[SerializeField] int health;
+    BaseHealthScript baseHealth;
 
-    [SerializeField] int health;
+    void Awake(){
+        baseHealth = GameObject.Find("core").GetComponent<BaseHealthScript>();
+    }
 
     public void loseHealth(int damage)
     {
         GameObject.Find("SoundController").GetComponent<Sound>().SpawnSound("PlayerDamaged");
-        health = health - damage;
-        if (health <= 0)
-        {
-            Destroy(gameObject);
-        }
+        baseHealth.loseHealth(damage);
     }
 
     public void gainHealth(int heal)
     {
-        health = health + heal;
+        baseHealth.gainHealth(heal);
     }
 }

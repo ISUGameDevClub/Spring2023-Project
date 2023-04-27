@@ -57,4 +57,17 @@ MonoBehaviour:
   TowerDestroyPrefab: {fileID: 4967475202125170013, guid: eb7a874c5f5dd0e4cb0cb9982c5536b5, type: 3}
   TowerPlace1Prefab: {fileID: 4967475202125170013, guid: 7dc026484096fd140b150642cb492cd9, type: 3}
   WaveIncomingPrefab: {fileID: 4967475202125170013, guid: e6c8c8910f7cb404d8690c3141d8524f, type: 3}
+  assassinDeathPrefab: {fileID: 4967475202125170013, guid: 733a6f4cd32f5e04b92b716fe13c1a68, type: 3}
+  BasicTowerShootPrefab: {fileID: 4967475202125170013, guid: 95c54b9cab2d2be42a784c83d4ffb9c0, type: 3}
+  chainShootPrefab: {fileID: 4967475202125170013, guid: 39626192cda82bc4f9fbeba465593c40, type: 3}
+  EnemyHitPrefab: {fileID: 4967475202125170013, guid: 3d0a62053523147059b480937d8d3901, type: 3}
+  EvilLaughBentPrefab: {fileID: 4967475202125170013, guid: 26aa77e7b30e3504aa58539577af61c2, type: 3}
+  GlassDeathPrefab: {fileID: 4967475202125170013, guid: 873467ea69c8548f6ae4fad960446db8, type: 3}
+  guardDeathPrefab: {fileID: 4967475202125170013, guid: c13e916b74e4d4d0bad2846acbfc0d33, type: 3}
+  HarvestPrefab: {fileID: 4967475202125170013, guid: aa462a466d0fa0d48abf7d42dfac28bc, type: 3}
+  LazerPrefab: {fileID: 4967475202125170013, guid: 6668226c2bc244e5887fae74c4d677fd, type: 3}
+  mouseOverTower1Prefab: {fileID: 4967475202125170013, guid: 566e21f90f359ce4692969acd8373425, type: 3}
+  mouseOverTower2Prefab: {fileID: 4967475202125170013, guid: e879a0d52d445496495b18392d0558fe, type: 3}
+  SoldierDeathPrefab: {fileID: 4967475202125170013, guid: 75e1a513fc80f45bcb6a80cfcb91fe70, type: 3}
+  StephenDeath8BitPrefab: {fileID: 4967475202125170013, guid: 1586496ed8434450a8c3b7a6b51d6129, type: 3}
   DestroyTime: 1.5

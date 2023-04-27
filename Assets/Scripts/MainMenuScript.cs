@@ -9,7 +9,7 @@ public class MainMenuScript : MonoBehaviour
     public void PlayGame()
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        FindObjectOfType<TransitionController>().FadeToLevel("mainMenu");
+        FindObjectOfType<TransitionController>().FadeToLevel("GameShowcaseDemo1");
     }
 
     public void ExitGame()

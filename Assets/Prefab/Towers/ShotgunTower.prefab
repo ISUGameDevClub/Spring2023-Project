@@ -229,7 +229,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 6434496924394768136, guid: 0831603921a23c54786f54b69427d744, type: 3}
   chainProjectilePrefab: {fileID: 0}
   attackDamage: 10
-  towerType: 0
+  towerType: 3
 --- !u!114 &8975797925218310313
 MonoBehaviour:
   m_ObjectHideFlags: 0

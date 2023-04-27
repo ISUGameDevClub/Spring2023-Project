@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerTurn : MonoBehaviour
 {
+    public Transform firePoint;
+    public SpriteRenderer playerSpriteRenderer;
+
     Rigidbody2D rb;
     Vector2 mousePos;
     // Start is called before the first frame update
@@ -21,6 +24,15 @@ public class PlayerTurn : MonoBehaviour
     {
         Vector2 lookDir = mousePos - rb.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
-        rb.rotation = angle;
+        firePoint.rotation = Quaternion.Euler(0f, 0f, angle);
+
+        if (lookDir.x < 0)
+        {
+            playerSpriteRenderer.flipX = true;
+        }
+        else
+        {
+            playerSpriteRenderer.flipX = false;
+        }
     }
 }

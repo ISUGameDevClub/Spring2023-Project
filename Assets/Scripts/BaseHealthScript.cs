@@ -10,6 +10,10 @@ public class BaseHealthScript : MonoBehaviour
     [SerializeField]
     private int health;
 
+    private void Awake(){
+        health = maxHealth;
+    }
+
     public void loseHealth(int amount){
         health -= amount;
         if(health < 0) health = 0;

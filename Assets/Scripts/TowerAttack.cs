@@ -26,7 +26,10 @@ public class TowerAttack : MonoBehaviour
 
     private void Start()
     {
-        towerAnims = GetComponentInChildren<Animator>();
+        if (GetComponentInChildren<Animator>() != null)
+        {
+            towerAnims = GetComponentInChildren<Animator>();
+        }
     }
 
     // Update is called once per frame
@@ -65,7 +68,11 @@ public class TowerAttack : MonoBehaviour
         Debug.Log(towerType);
         if (target.Any(item => item.GetComponent<EnemyHealth>()))
         {
-            towerAnims.SetTrigger("attack");
+
+            if (towerAnims != null)
+            {
+                towerAnims.SetTrigger("attack");
+            }
             GameObject projectile;
             // Gets the first object with the tag of Tower, no matter what postion it is from the array.
             Vector3 vectorToTarget = target[target.IndexOf(target.Where(x => x.tag == "Enemy/Ground").FirstOrDefault())].transform.position - transform.position;

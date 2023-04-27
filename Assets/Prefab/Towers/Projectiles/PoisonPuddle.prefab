@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puddleDuration: 10
-  damgePerTick: 2
+  damgePerTick: 7
   tickRate: 2
 --- !u!95 &7446763520378938720
 Animator:

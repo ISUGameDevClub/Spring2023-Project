@@ -115,7 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyAttackSpeed: 1
   projectilePrefab: {fileID: 246787300294633112, guid: 7cea57c9221904e4e9dcda6a67862d57, type: 3}
-  attackDamage: 5
+  attackDamage: 13
 --- !u!114 &1574034960842526167
 MonoBehaviour:
   m_ObjectHideFlags: 0

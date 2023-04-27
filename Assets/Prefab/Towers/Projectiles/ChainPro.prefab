@@ -146,7 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bloodSplatter: {fileID: 7876986648571315053, guid: b4931b60d1bc77d4d8fd5ea6029dff7a, type: 3}
   speed: 10
-  attackRange: 1
+  attackRange: 8
   chains: 7
   lockTarget: {fileID: 0}
   attackDamage: 0

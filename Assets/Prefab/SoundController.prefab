@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1ca5b99109bc7c429322159df089205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShootPrefab: {fileID: 4967475202125170013, guid: 847cb8f127962ed49b9d74cbb32a02b7, type: 3}
+  ShootPrefab: {fileID: 4967475202125170013, guid: 866ce975369b9ad4d8cb3c6c96bbb269, type: 3}
   Footsteps2Prefab: {fileID: 4967475202125170013, guid: ed2c512fd7652a84db59446ba39bd31e, type: 3}
   GasEmitPrefab: {fileID: 4967475202125170013, guid: 47df0fab2e02c2747a51265f5868b20c, type: 3}
   MenuMoveLongPrefab: {fileID: 4967475202125170013, guid: 752ddbc919c591541ac1a192e497ecf7, type: 3}

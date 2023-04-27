@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3332760471812532822}
   - component: {fileID: 3322352515605564919}
   - component: {fileID: 40508297075803340}
+  - component: {fileID: 2428545881206088264}
   m_Layer: 0
   m_Name: TowerPro
   m_TagString: Untagged
@@ -75,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.05098039, g: 1, b: 0.9117792, a: 1}
+  m_Sprite: {fileID: -1660553775, guid: 580a8b7833101b641a66979886c38a22, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -127,3 +128,23 @@ MonoBehaviour:
   speed: 10
   attackRange: 10
   attackDamage: 0
+--- !u!95 &2428545881206088264
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868895473673010215}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a71d1eca8f8cc004a8bcc1c689c43264, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0

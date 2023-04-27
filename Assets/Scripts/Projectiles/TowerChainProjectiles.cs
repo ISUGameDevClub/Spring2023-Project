@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class TowerChainProjectiles : MonoBehaviour
 {
+    //Gamobject setpiece for bloodsplatter effect.
+    public GameObject bloodSplatter;
+
     [SerializeField] float speed = 10f;
     [SerializeField] float attackRange = 1f;
     [SerializeField] int chains = 1;
@@ -37,6 +40,7 @@ public class TowerChainProjectiles : MonoBehaviour
     {
         if (collision.GetComponent<EnemyHealth>())
         {
+            Instantiate(bloodSplatter, collision.transform.position, collision.transform.rotation, null);
             // Set the bullet to the center of the hit object to make it the firing origin.
             transform.position = collision.transform.position;
             // This If statment checks to make sure that the target is the one that loses health and not other objects in the line of fire.

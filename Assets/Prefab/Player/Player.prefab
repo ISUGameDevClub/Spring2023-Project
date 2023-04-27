@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3425731274571803984}
   - component: {fileID: 3425731274571803987}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3425731274659329534}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 4089606559287040787}
   - component: {fileID: 4089606559287040786}
   - component: {fileID: 8626756569902940862}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -347,7 +347,7 @@ GameObject:
   - component: {fileID: 1020921711301442115}
   - component: {fileID: 5521138649307757973}
   - component: {fileID: 9191944879337725377}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlayerSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

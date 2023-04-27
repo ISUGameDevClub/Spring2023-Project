@@ -48,6 +48,15 @@ public class EnemyMeleeAttackManager : MonoBehaviour
             GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.Euler(0, 0, targetAngle));
             projectile.GetComponent<MeleeAttack>().attackDamage = attackDamage;
         }
+        else if (target.Any(item => item.tag == "Core"))
+        {
+            // Gets the first object with the tag of Core, no matter what postion it is from the array.
+            Vector3 vectorToTarget = target[target.IndexOf(target.Where(x => x.tag == "Core").FirstOrDefault())].transform.position - transform.position;
+            // Gets the angle of the target from the fireing origin.
+            float targetAngle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
+            GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.Euler(0, 0, targetAngle));
+            projectile.GetComponent<MeleeAttack>().attackDamage = attackDamage;
+        }
         yield return new WaitForSeconds(enemyAttackSpeed);
         attackCoroutineRunning = false;
     }

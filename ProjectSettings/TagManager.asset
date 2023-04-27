@@ -9,6 +9,7 @@ TagManager:
   - Enemy/Ground
   - Tower
   - FXCanvas
+  - Core
   layers:
   - Default
   - TransparentFX
@@ -45,4 +46,31 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player/Effects
+    uniqueID: 889589605
+    locked: 0
+  - name: Tower/Effects
+    uniqueID: 3890652155
+    locked: 0
+  - name: Enemy/Effects
+    uniqueID: 4269171375
+    locked: 0
+  - name: Player/Self
+    uniqueID: 2006192533
+    locked: 0
+  - name: Tower/Self
+    uniqueID: 1203923665
+    locked: 0
+  - name: Enemy/Self
+    uniqueID: 969522073
+    locked: 0
+  - name: Player/Projectile
+    uniqueID: 15360637
+    locked: 0
+  - name: Enemy/Attacks
+    uniqueID: 1602309337
+    locked: 0
+  - name: Tower/Projectiles
+    uniqueID: 2930952797
     locked: 0

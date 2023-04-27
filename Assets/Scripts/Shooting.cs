@@ -41,7 +41,6 @@ public class Shooting : MonoBehaviour
     }
     void Shoot()
     {
-        
         playerAnims.SetTrigger("attack");
 
         GameObject bullet = Instantiate(BulletPrefab, FirePoint.position, FirePoint.rotation);

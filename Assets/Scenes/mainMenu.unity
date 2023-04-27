@@ -390,11 +390,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 286707071}
   m_CullTransparentMesh: 1
---- !u!224 &402782764 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 8486130179187141049, guid: be409dba5bf7dfb48958b797c6c3c85e, type: 3}
-  m_PrefabInstance: {fileID: 830617773}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &533732693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43076,14 +43071,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1340151256}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2007299042}
-  m_Father: {fileID: 402782764}
-  m_RootOrder: 3
+  m_Father: {fileID: 1916915758}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -43483,6 +43478,11 @@ PrefabInstance:
     - {fileID: 4089606559287040786, guid: 241981f7df78fa944815c8d36c2d14ae, type: 3}
     - {fileID: 8626756569902940862, guid: 241981f7df78fa944815c8d36c2d14ae, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 241981f7df78fa944815c8d36c2d14ae, type: 3}
+--- !u!224 &1916915758 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8486130179602142567, guid: be409dba5bf7dfb48958b797c6c3c85e, type: 3}
+  m_PrefabInstance: {fileID: 830617773}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2007299041
 GameObject:
   m_ObjectHideFlags: 0

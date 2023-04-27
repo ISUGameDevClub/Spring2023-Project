@@ -14,6 +14,17 @@ public class BaseHealthScript : MonoBehaviour
         health = maxHealth;
     }
 
+    //KILL THIS WHEN GAMES SHOWCASE IS OVER
+    private bool resetTriggered = false;
+    public void Update()
+    {
+        if (health <= 0 && !resetTriggered)
+        {
+            resetTriggered = true;
+            FindObjectOfType<TransitionController>().ResetCurrentScene();
+        }
+    }
+
     public void loseHealth(int amount){
         health -= amount;
         if(health < 0) health = 0;

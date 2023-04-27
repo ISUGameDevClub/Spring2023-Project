@@ -15,7 +15,7 @@ public class WaveController : MonoBehaviour
 
     // Temporary measure for GameShowcaseDemo
     [SerializeField]
-    private int winSceneIndex;
+    private string winScene;
 
     public enum phaseType
     {
@@ -154,7 +154,6 @@ public class WaveController : MonoBehaviour
         StartCoroutine(beginNextWave());
     }
 
-    
     // Update is called once per frame
     void Update()
     {
@@ -162,15 +161,15 @@ public class WaveController : MonoBehaviour
         // This could potentially/should be changed in the future, I'm checking if all enemies are dead by counting the children of an enemyHolder transform.
         // This method could cause issues with the dog enemy. If the dog enemy is the last one to die, then theoretically, it could start the next wave before spawning
         // the dogs.
-        if(enemyHolder.childCount == 0 && enemiesSpawned && WaveNumber < waves.Length)
+        if (enemyHolder.childCount == 0 && enemiesSpawned && WaveNumber < waves.Length)
         {
             enemiesSpawned = false;
             StartCoroutine(beginNextWave());
         }
-        else if (WaveNumber == waves.Length)
+        else if (WaveNumber == waves.Length && enemyHolder.childCount == 0)
         {
             // In this case, the last wave has finished. // Temporary measure for the GameShowcaseDemo.
-            SceneManager.LoadScene(winSceneIndex);
+            FindObjectOfType<TransitionController>().FadeToLevel(winScene);
         }
     }
 }

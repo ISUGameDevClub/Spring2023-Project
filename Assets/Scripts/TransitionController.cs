@@ -30,4 +30,9 @@ public class TransitionController : MonoBehaviour
     {
         SceneManager.LoadScene(nextLevel);
     }
+
+    public void ResetCurrentScene()
+    {
+        FadeToLevel(SceneManager.GetActiveScene().name);
+    }
 }

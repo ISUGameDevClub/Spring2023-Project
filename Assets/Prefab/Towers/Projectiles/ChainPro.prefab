@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2808822926064701026}
   - component: {fileID: -705851631597316685}
   - component: {fileID: 5491698315203150475}
+  - component: {fileID: 670011906836142349}
   m_Layer: 0
   m_Name: ChainPro
   m_TagString: Untagged
@@ -77,8 +78,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.05098039, g: 1, b: 0.9117792, a: 1}
+  m_Sprite: {fileID: -481748028, guid: 5ab84cddf3ac48a439f210d65bb741b9, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -143,6 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85494dc928ca063478937d2786d4388b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bloodSplatter: {fileID: 7876986648571315053, guid: b4931b60d1bc77d4d8fd5ea6029dff7a, type: 3}
   speed: 10
   attackRange: 1
   chains: 7
@@ -151,6 +153,26 @@ MonoBehaviour:
   fireChain: []
   detectObject: {fileID: 1913956920642275204}
   dontChainToSameEnemys: 1
+--- !u!95 &670011906836142349
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228929761512374194}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 31be3a7310c8a824a9d9adb257c209ba, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &1913956920642275204
 GameObject:
   m_ObjectHideFlags: 0

@@ -27,4 +27,14 @@ public class BaseHealthScript : MonoBehaviour
     public bool baseDestroyed(){
         return health == 0;
     }
+
+    public int getCurrentHealth()
+    {
+        return health;
+    }
+
+    public int getMaxHealth()
+    {
+        return maxHealth;
+    }
 }

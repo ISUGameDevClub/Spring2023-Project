@@ -20,7 +20,6 @@ public class ChainProjectile : MonoBehaviour
     {
         movementTime = attackRange / speed;
         timeStop = Time.time + movementTime;
-
     }
 
     // Update is called once per frame

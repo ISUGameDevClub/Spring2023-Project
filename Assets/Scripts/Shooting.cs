@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
+using UnityEngine.Audio;
 
 public class Shooting : MonoBehaviour
 {
@@ -10,12 +11,14 @@ public class Shooting : MonoBehaviour
     public Transform FirePoint;
     public GameObject BulletPrefab;
 
+    GameObject soundCont; 
     [SerializeField] float bulletForce;
     [SerializeField] float bulletCooldown;
     private bool canFire;
     // Start is called before the first frame update
     void Start()
     {
+        soundCont = GameObject.Find("SoundController");
         canFire = true;
         playerAnims = GetComponentInChildren<Animator>();
     }
@@ -41,13 +44,7 @@ public class Shooting : MonoBehaviour
         GameObject bullet = Instantiate(BulletPrefab, FirePoint.position, FirePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(FirePoint.up * bulletForce, ForceMode2D.Impulse);
-        //if (GetComponent<Sound>()) { 
-        GameObject.Find("SoundController").GetComponent<Sound>().SpawnSound("PitchforkThrow");
-        /*}
-        else
-        {
-            Debug.Log("There is no Sound!");
-        }*/
+        soundCont.GetComponent<Sound>().SpawnSound("PitchforkThrow");
     }
     IEnumerator fireWait()
     {

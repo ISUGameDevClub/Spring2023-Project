@@ -26,4 +26,24 @@ public class StateController : MonoBehaviour
             Debug.Log(state);
        }
     }
+
+    public int getState()
+    {
+        return state;
+    }
+
+    public string getStateString()
+    {
+        switch (state)
+        {
+            case 0:
+                return "Attack";
+            case 1:
+                return "Build";
+            case 2:
+                return "Sell";
+            default:
+                return "Unknown";
+        }
+    }
 }

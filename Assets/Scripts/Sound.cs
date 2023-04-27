@@ -13,7 +13,8 @@ public class Sound : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(this);
+        // Noted out to prevent multiple copies of the player from spawning after the GameShowcaseDemo scenes reload.
+        //DontDestroyOnLoad(this);
     }
 
     // Update is called once per frame

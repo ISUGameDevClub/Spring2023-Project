@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WaveController : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class WaveController : MonoBehaviour
     private phaseType currentPhaseType;
     public Transform enemyHolder;
     private bool shouldSkipSetup = false;
+
+    // Temporary measure for GameShowcaseDemo
+    [SerializeField]
+    private int winSceneIndex;
 
     public enum phaseType
     {
@@ -39,8 +44,11 @@ public class WaveController : MonoBehaviour
         NORTHWEST,
     }
 
+    [Header("Spawnpoints")]
     [SerializeField]
-    private Transform northSpawn,northEastSpawn, eastSpawn, southEastSpawn, southSpawn, southWestSpawn, westSpawn, northWestSpawn;
+    private Transform northSpawn;
+    [SerializeField]
+    private Transform northEastSpawn, eastSpawn, southEastSpawn, southSpawn, southWestSpawn, westSpawn, northWestSpawn;
 
     private Transform getSpawnTransform(spawnLocation location)
     {
@@ -161,7 +169,8 @@ public class WaveController : MonoBehaviour
         }
         else if (WaveNumber == waves.Length)
         {
-            // In this case, the last wave has finished 
+            // In this case, the last wave has finished. // Temporary measure for the GameShowcaseDemo.
+            SceneManager.LoadScene(winSceneIndex);
         }
     }
 }

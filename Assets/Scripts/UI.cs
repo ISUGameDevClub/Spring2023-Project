@@ -14,11 +14,12 @@ public class UI : MonoBehaviour
 
     private void Awake()
     {
-        stateController = GameManager.instance.GetComponent<StateController>();
+        
     }
     // Start is called before the first frame update
     void Start()
     {
+        stateController = GameManager.instance.GetComponent<StateController>();
         currencyManager = FindObjectOfType<CurrencyManager>();
     }
 

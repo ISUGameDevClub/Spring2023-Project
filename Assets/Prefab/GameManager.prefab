@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCurrentCurrency: 0
-  startingCurrency: 2000
+  startingCurrency: 1500
 --- !u!114 &425471780
 MonoBehaviour:
   m_ObjectHideFlags: 0

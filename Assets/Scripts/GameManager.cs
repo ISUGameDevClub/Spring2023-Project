@@ -21,7 +21,8 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        DontDestroyOnLoad(gameObject);
+        //Noting this out as Temporary measure for GameShowcaseBuild
+        //DontDestroyOnLoad(gameObject);
     }
 
         // Start is called before the first frame update

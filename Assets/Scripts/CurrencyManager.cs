@@ -10,17 +10,22 @@ public class CurrencyManager : MonoBehaviour
     public static CurrencyManager instance;
     void Awake()
     {
-        if (instance != null)
+        if (instance != null && instance != this)
         {
-            Debug.LogError("More than one CurrencyManager in scene");
+            Destroy(this);
+            // Not sure why, but this seems to run when the GameShowcaseDemoScene Reloads
+            // Assuming part of it has to do with how the scene has a built-int Gamemanager on load (this is the case)
+            // I had to remove the Debug.Error statement to prevent a gameplay issue.
+            Debug.Log("How were there two CurrencyManagers?");
             return;
         }
         instance = this;
+
     }
     // Start is called before the first frame update
     void Start()
     {
-        playerCurrentCurrency = startingCurrency;
+       resetPlayerCurrency();
     }
     public void AddCurrency(int currencyToAdd)
     {
@@ -61,5 +66,9 @@ public class CurrencyManager : MonoBehaviour
     public void SetPlayerCurrency(int setCurrency)
     {
         playerCurrentCurrency = setCurrency;
+    }
+
+    public void resetPlayerCurrency(){
+        playerCurrentCurrency = startingCurrency;
     }
 }

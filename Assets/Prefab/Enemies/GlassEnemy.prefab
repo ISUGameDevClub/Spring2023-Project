@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collidersInside: []
---- !u!1 &4459446533761123536
+--- !u!1 &3685327177820175076
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -70,73 +70,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4459446533761123543}
-  - component: {fileID: 5138464844753271354}
-  - component: {fileID: 8665354359165929827}
-  - component: {fileID: 4459446533761123542}
-  - component: {fileID: 4459446533761123540}
-  - component: {fileID: 8359173623759818020}
-  - component: {fileID: 1031115734643945096}
-  - component: {fileID: 274455662843526991}
+  - component: {fileID: 557870083891191432}
+  - component: {fileID: 1105293683176428314}
+  - component: {fileID: 1209483891182358653}
   m_Layer: 0
-  m_Name: GlassEnemy
-  m_TagString: Enemy/Ground
+  m_Name: Sprite
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4459446533761123543
+--- !u!4 &557870083891191432
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4459446533761123536}
+  m_GameObject: {fileID: 3685327177820175076}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3280025335938870789}
-  - {fileID: 6969428832006510350}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_Children: []
+  m_Father: {fileID: 4459446533761123543}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5138464844753271354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4459446533761123536}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f56b477aa84e95f4ca216c858036f8b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyAttackSpeed: 0.5
-  projectilePrefab: {fileID: 3487309745803466772, guid: 404d49bb24b7fd142ae44079c3d638d0, type: 3}
-  attackDamage: 5
---- !u!114 &8665354359165929827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4459446533761123536}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b05b2448632da9648adb9a850207c8bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 70
---- !u!212 &4459446533761123542
+--- !u!212 &1105293683176428314
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4459446533761123536}
+  m_GameObject: {fileID: 3685327177820175076}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -182,6 +147,86 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1209483891182358653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3685327177820175076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8664731ec4883ce41b7fb25b41e573f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &4459446533761123536
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4459446533761123543}
+  - component: {fileID: 5138464844753271354}
+  - component: {fileID: 8665354359165929827}
+  - component: {fileID: 4459446533761123540}
+  - component: {fileID: 8359173623759818020}
+  - component: {fileID: 1031115734643945096}
+  - component: {fileID: 274455662843526991}
+  m_Layer: 0
+  m_Name: GlassEnemy
+  m_TagString: Enemy/Ground
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4459446533761123543
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4459446533761123536}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3280025335938870789}
+  - {fileID: 6969428832006510350}
+  - {fileID: 557870083891191432}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5138464844753271354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4459446533761123536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f56b477aa84e95f4ca216c858036f8b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyAttackSpeed: 0.5
+  projectilePrefab: {fileID: 3487309745803466772, guid: 404d49bb24b7fd142ae44079c3d638d0, type: 3}
+  attackDamage: 5
+--- !u!114 &8665354359165929827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4459446533761123536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b05b2448632da9648adb9a850207c8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 70
 --- !u!50 &4459446533761123540
 Rigidbody2D:
   serializedVersion: 4

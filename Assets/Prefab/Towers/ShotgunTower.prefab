@@ -66,7 +66,7 @@ GameObject:
   - component: {fileID: 8975797925218310313}
   m_Layer: 0
   m_Name: ShotgunTower
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 946fe516742bd8d428f5586916b31694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 6
+  health: 200
 --- !u!114 &5077729786145225099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,7 +229,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 6434496924394768136, guid: 0831603921a23c54786f54b69427d744, type: 3}
   chainProjectilePrefab: {fileID: 0}
   attackDamage: 10
-  towerType: 0
+  towerType: 3
 --- !u!114 &8975797925218310313
 MonoBehaviour:
   m_ObjectHideFlags: 0

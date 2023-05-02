@@ -236,7 +236,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 6743266026246061844, guid: 9acb59d74b08aad4d82da1548869d7f0, type: 3}
   chainProjectilePrefab: {fileID: 0}
   attackDamage: 70
-  towerType: 0
+  towerType: 2
 --- !u!70 &7815940876562680098
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

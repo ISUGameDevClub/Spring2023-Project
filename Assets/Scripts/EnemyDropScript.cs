@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EnemyDropScript : MonoBehaviour
 {
+    //public GameObject currencySeed;
+    //public GameObject 
+
     [SerializeField]
     private int currencyDropAmount;
     [SerializeField]

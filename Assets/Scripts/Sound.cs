@@ -7,7 +7,7 @@ public class Sound : MonoBehaviour
     public GameObject ShootPrefab, Footsteps2Prefab, GasEmitPrefab, MenuMoveLongPrefab, MenuMoveShortPrefab, MenuSelectPrefab,
         MoneyGetPrefab, PitchforkThrowPrefab, PlayerDamagedPrefab, ShotgunTowerShoot2Prefab, TowerDestroyPrefab, TowerPlace1Prefab,
         WaveIncomingPrefab, assassinDeathPrefab, BasicTowerShootPrefab, chainShootPrefab, EnemyHitPrefab, EvilLaughBentPrefab, GlassDeathPrefab, guardDeathPrefab, HarvestPrefab,
-        LazerPrefab, mouseOverTower1Prefab, mouseOverTower2Prefab, SoldierDeathPrefab, StephenDeath8BitPrefab;
+        LazerPrefab, mouseOverTower1Prefab, mouseOverTower2Prefab, SoldierDeathPrefab, StephenDeath8BitPrefab, Whistle1, Whistle2, Whistle3, Whistle4;
     public float DestroyTime;
    
     // Start is called before the first frame update
@@ -126,6 +126,22 @@ public class Sound : MonoBehaviour
             case "Stephen_Death_8Bit": //
                 GameObject stephenDeath8Bit = Instantiate(StephenDeath8BitPrefab);
                 Destroy(stephenDeath8Bit, DestroyTime);
+                break;
+            case "Whistle_1": //
+                GameObject whistle1 = Instantiate(Whistle1);
+                Destroy(whistle1, DestroyTime);
+                break;
+            case "Whistle_2": //
+                GameObject whistle2 = Instantiate(Whistle2);
+                Destroy(whistle2, DestroyTime);
+                break;
+            case "Whistle_3": //
+                GameObject whistle3 = Instantiate(Whistle3);
+                Destroy(whistle3, DestroyTime);
+                break;
+            case "Whistle_4": //
+                GameObject whistle4 = Instantiate(Whistle4);
+                Destroy(whistle4, DestroyTime);
                 break;
         }
 

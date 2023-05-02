@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1ca5b99109bc7c429322159df089205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShootPrefab: {fileID: 4967475202125170013, guid: 847cb8f127962ed49b9d74cbb32a02b7, type: 3}
+  ShootPrefab: {fileID: 4967475202125170013, guid: 866ce975369b9ad4d8cb3c6c96bbb269, type: 3}
   Footsteps2Prefab: {fileID: 4967475202125170013, guid: ed2c512fd7652a84db59446ba39bd31e, type: 3}
   GasEmitPrefab: {fileID: 4967475202125170013, guid: 47df0fab2e02c2747a51265f5868b20c, type: 3}
   MenuMoveLongPrefab: {fileID: 4967475202125170013, guid: 752ddbc919c591541ac1a192e497ecf7, type: 3}
@@ -70,4 +70,8 @@ MonoBehaviour:
   mouseOverTower2Prefab: {fileID: 4967475202125170013, guid: e879a0d52d445496495b18392d0558fe, type: 3}
   SoldierDeathPrefab: {fileID: 4967475202125170013, guid: 75e1a513fc80f45bcb6a80cfcb91fe70, type: 3}
   StephenDeath8BitPrefab: {fileID: 4967475202125170013, guid: 1586496ed8434450a8c3b7a6b51d6129, type: 3}
+  Whistle1: {fileID: 4967475202125170013, guid: d6c619322079fec40907d17b7bdd5ed6, type: 3}
+  Whistle2: {fileID: 4967475202125170013, guid: 5caefd05c6f703c4cab944cfb7071bcd, type: 3}
+  Whistle3: {fileID: 4967475202125170013, guid: 312da0211c9f1074688ca38bdc6e49b9, type: 3}
+  Whistle4: {fileID: 4967475202125170013, guid: 2681ad50372cfcb4f87f242e8ffedc26, type: 3}
   DestroyTime: 1.5

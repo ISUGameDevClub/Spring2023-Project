@@ -168,11 +168,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 376495660786983955}
-  - {fileID: 1841006680}
   - {fileID: 1646172387500712252}
   - {fileID: 3986713110640626083}
   - {fileID: 3606662871454884214}
   - {fileID: 1074815894266455096}
+  - {fileID: 1841006680}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -254,6 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4660d8c67687ac43b46cf57ad73a173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerBarAnims: {fileID: 1559515924328512482}
   moneyText: {fileID: 376495660786983952}
   stateText: {fileID: 5417222072905125406}
 --- !u!1 &490907364541666274
@@ -650,7 +651,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 376495662518864624}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -1046,7 +1047,7 @@ RectTransform:
   - {fileID: 730487679702958234}
   - {fileID: 1376566235089864124}
   m_Father: {fileID: 376495662518864624}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1227,7 +1228,7 @@ RectTransform:
   - {fileID: 887128174380752746}
   - {fileID: 6227196542230938089}
   m_Father: {fileID: 376495662518864624}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1318,7 +1319,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 376495662518864624}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1553,7 +1554,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2192391986366731727, guid: dc2f6cac399814d478ee7939438a8c54, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2192391986366731727, guid: dc2f6cac399814d478ee7939438a8c54, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1632,5 +1633,10 @@ PrefabInstance:
 --- !u!224 &1841006680 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2192391986366731727, guid: dc2f6cac399814d478ee7939438a8c54, type: 3}
+  m_PrefabInstance: {fileID: 2192391986008743319}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1559515924328512482 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 849055649204315765, guid: dc2f6cac399814d478ee7939438a8c54, type: 3}
   m_PrefabInstance: {fileID: 2192391986008743319}
   m_PrefabAsset: {fileID: 0}

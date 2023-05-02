@@ -87,13 +87,13 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.transform.tag == "Enemy/Ground")
         {
-            Debug.Log("I can hit that");
+            //Debug.Log("I can hit that");
         } else if(collision.transform.tag == "Enemy/Flying")
         {
-            Debug.Log("I can't hit that");
+            //Debug.Log("I can't hit that");
         } else
         {
-            Debug.Log("WTF is that");
+            //Debug.Log("WTF is that");
             Debug.Log(collision.transform.tag);
 
         }

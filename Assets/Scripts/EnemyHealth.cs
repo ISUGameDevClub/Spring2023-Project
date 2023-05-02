@@ -15,7 +15,7 @@ public class EnemyHealth : MonoBehaviour
             EnemyDropScript dropScript = this.GetComponent<EnemyDropScript>();
             if (dropScript != null) dropScript.dropItems();
 
-            if (gameObject.name.Substring(0, 4).Equals("Guard"))
+            if (gameObject.name.Length >= 4 && gameObject.name.Substring(0, 4).Equals("Guard"))
             {
                 Debug.Log("Dropped doggie...");
                 Instantiate(guardEnemyDogPrefab, transform.parent, true);

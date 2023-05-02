@@ -18,8 +18,9 @@ public class EnemyDropScript : MonoBehaviour
 
     public void dropItems()
     {
-        if(currencyDropProbability == 1f || (currencyDropProbability > 0 && evaluateDropSuccess(currencyDropAmount)))
+        if(evaluateDropSuccess(currencyDropProbability))
         {
+            Debug.Log("A1. Drop money SUCCESS");
             CurrencyManager.instance.AddCurrency(currencyDropAmount);
         }
        /* if(seedDropProbability == 1f || (seedDropProbability > 0 && evaluateDropSuccess(seedDropProbability)))
@@ -30,6 +31,6 @@ public class EnemyDropScript : MonoBehaviour
 
     private bool evaluateDropSuccess(float probability)
     {
-        return (probability < Random.value);
+        return (probability > Random.value);
     }
 }

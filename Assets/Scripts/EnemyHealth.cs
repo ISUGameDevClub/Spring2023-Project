@@ -17,7 +17,6 @@ public class EnemyHealth : MonoBehaviour
 
             if (gameObject.name.Length >= 4 && gameObject.name.Substring(0, 5).Equals("Guard"))
             {
-                Debug.Log("SDFWERG$#GSD");
                 Instantiate(guardEnemyDogPrefab, transform.position, transform.rotation, null);
             }
             Destroy(gameObject);

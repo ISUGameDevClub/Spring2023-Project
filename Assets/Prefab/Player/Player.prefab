@@ -287,6 +287,10 @@ MonoBehaviour:
   mouseOverTower2Prefab: {fileID: 0}
   SoldierDeathPrefab: {fileID: 0}
   StephenDeath8BitPrefab: {fileID: 0}
+  Whistle1: {fileID: 0}
+  Whistle2: {fileID: 0}
+  Whistle3: {fileID: 0}
+  Whistle4: {fileID: 0}
   DestroyTime: 1.5
 --- !u!58 &4089606559287040787
 CircleCollider2D:

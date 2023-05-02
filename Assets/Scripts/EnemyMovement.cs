@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-
+    public Animator enemyAnims;
 
     [SerializeField] float speed;
     [SerializeField] GameObject towerDetectObject;
@@ -33,6 +33,8 @@ public class EnemyMovement : MonoBehaviour
      */
     void Start()
     {
+        enemyAnims = GetComponent<Animator>();
+
         rb = GetComponent<Rigidbody2D>();
         playerCore = GameObject.Find("core");
     }
@@ -65,6 +67,7 @@ public class EnemyMovement : MonoBehaviour
                 if (Vector2.Distance(playerCore.transform.position, rb.position) > bufferDistance)
                 {
                     rb.MovePosition(rb.position + pos.normalized * speed * Time.deltaTime);
+                    enemyAnims.SetBool("moving", true);
                 }
             } else
             {
@@ -79,7 +82,18 @@ public class EnemyMovement : MonoBehaviour
                 if (Vector2.Distance(NearestObject.transform.position, rb.position) > bufferDistance)
                 {
                     rb.MovePosition(rb.position + pos.normalized * speed * Time.deltaTime);
+                    enemyAnims.SetBool("moving", true);
                 }
+            }
+
+            //Flip sprite TOWARDS what its facing.
+            if(rb.position.x - NearestObject.transform.position.x < 0)
+            {
+                GetComponentInChildren<SpriteRenderer>().flipX = false;
+            }
+            else if(rb.position.x - NearestObject.transform.position.x > 0)
+            {
+                GetComponentInChildren<SpriteRenderer>().flipX = true;
             }
         } else
         {
@@ -89,6 +103,17 @@ public class EnemyMovement : MonoBehaviour
             if (Vector2.Distance(playerCore.transform.position, rb.position) > bufferDistance)
             {
                 rb.MovePosition(rb.position + pos.normalized * speed * Time.deltaTime);
+                enemyAnims.SetBool("moving", true);
+            }
+
+            //Flip sprite TOWARDS the player. 
+            if (rb.position.x - playerCore.transform.position.x < 0)
+            {
+                GetComponentInChildren<SpriteRenderer>().flipX = false;
+            }
+            else if (rb.position.x - playerCore.transform.position.x > 0)
+            {
+                GetComponentInChildren<SpriteRenderer>().flipX = true;
             }
         }
     }

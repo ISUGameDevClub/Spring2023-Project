@@ -5,10 +5,18 @@ using System.Linq;
 
 public class EnemyMeleeAttackManager : MonoBehaviour
 {
+    private Animator enemyAnims;
+
     public float enemyAttackSpeed;
     [SerializeField] GameObject projectilePrefab;
     public int attackDamage;
     private bool attackCoroutineRunning = false;
+
+    private void Start()
+    {
+        enemyAnims = GetComponent<Animator>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -27,6 +35,7 @@ public class EnemyMeleeAttackManager : MonoBehaviour
     private IEnumerator AttackEntity()
     {
         attackCoroutineRunning = true;
+
         //sorts all of the objects in the array in order by distance.
         var target = this.GetComponentInChildren<EnemyAttackRangeCollider>().collidersInside.OrderBy(go => (transform.position - go.transform.position).sqrMagnitude).ToList();
         if (target.Any(item => item.tag == "Tower"))
@@ -38,6 +47,7 @@ public class EnemyMeleeAttackManager : MonoBehaviour
             GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.Euler(0, 0, targetAngle));
             projectile.GetComponent<MeleeAttack>().attackDamage = attackDamage;
 
+            enemyAnims.SetTrigger("attacking");
         }
         else if (target.Any(item => item.tag == "Player"))
         {
@@ -47,6 +57,8 @@ public class EnemyMeleeAttackManager : MonoBehaviour
             float targetAngle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
             GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.Euler(0, 0, targetAngle));
             projectile.GetComponent<MeleeAttack>().attackDamage = attackDamage;
+
+            enemyAnims.SetTrigger("attacking");
         }
         else if (target.Any(item => item.tag == "Core"))
         {
@@ -56,6 +68,8 @@ public class EnemyMeleeAttackManager : MonoBehaviour
             float targetAngle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
             GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.Euler(0, 0, targetAngle));
             projectile.GetComponent<MeleeAttack>().attackDamage = attackDamage;
+
+            enemyAnims.SetTrigger("attacking");
         }
         yield return new WaitForSeconds(enemyAttackSpeed);
         attackCoroutineRunning = false;

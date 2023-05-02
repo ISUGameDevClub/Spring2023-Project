@@ -194,8 +194,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 969522073
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3ff451d4cb08c7447b19745066923a4a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -235,6 +235,7 @@ GameObject:
   - component: {fileID: 4120586456026820122}
   - component: {fileID: 4855375040428101046}
   - component: {fileID: -8241883696069654655}
+  - component: {fileID: 4467673036328511996}
   m_Layer: 0
   m_Name: Steven
   m_TagString: Enemy/Ground
@@ -287,6 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b05b2448632da9648adb9a850207c8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  guardEnemyDogPrefab: {fileID: 0}
   health: 150
 --- !u!50 &8128330393044297706
 Rigidbody2D:
@@ -337,6 +339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd559ca735aea44ba42fd95dfb1080d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyAnims: {fileID: 0}
   speed: 1.5
   towerDetectObject: {fileID: 3282187202551525500}
   bufferDistance: 1.2
@@ -358,3 +361,23 @@ MonoBehaviour:
   seedDropAmount: 0
   currencyDropProbability: 1
   seedDropProbability: 0
+--- !u!95 &4467673036328511996
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8128330393044297710}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 545def4067c45134e9a83baabb0c40d7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0

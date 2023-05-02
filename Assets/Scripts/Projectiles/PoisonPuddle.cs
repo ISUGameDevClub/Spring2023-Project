@@ -43,14 +43,14 @@ public class PoisonPuddle : MonoBehaviour
         if (other.gameObject.GetComponent<EnemyHealth>() && !collidersInside.Contains(other))
         {
             collidersInside.Add(other);
-            other.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.9186232f, 0.5509434f, 1, 1);
+            other.gameObject.GetComponentInChildren<SpriteRenderer>().color = new Color(0.9186232f, 0.5509434f, 1, 1);
         }
     }
     private void OnTriggerExit2D(Collider2D other)
     {
         if (collidersInside.Contains(other))
         {
-            other.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+            other.gameObject.GetComponentInChildren<SpriteRenderer>().color = new Color(1, 1, 1, 1);
         }
         collidersInside.Remove(other);
     }

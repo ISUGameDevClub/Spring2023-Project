@@ -4771,6 +4771,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3cf9fee38a7a594d99888e4c12e1ecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseTowerValues:
+  - {x: 150, y: 1, z: 50, w: 10}
+  - {x: 200, y: 1.5, z: 70, w: 5}
+  - {x: 70, y: 2, z: 70, w: 20}
+  - {x: 200, y: 2, z: 25, w: 8}
+  - {x: 250, y: 1, z: 10, w: 8}
+  - {x: 500, y: 0, z: 0, w: 0}
   towerUI: {fileID: 0}
   towerUpgrades:
   - costLevels: 010000000200000003000000

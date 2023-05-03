@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class UniversalUpgradeSys : MonoBehaviour
 {
+    [Header("Base health, speed, attack, and range values.")]
+    public Vector4[] baseTowerValues;
+
     private Animator shopAnims;
     private bool shopActive;
     private CurrencyManager currencyManager;
@@ -22,6 +25,20 @@ public class UniversalUpgradeSys : MonoBehaviour
         for (int i = 0; i < towerUpgrades.Count; i++)
         {
             towerUpgrades[i].level = 0;
+        }
+        //Set all tower prefab values to its base values.
+        for(int i = 0; i < baseTowerValues.Length; i++)
+        {
+            GameObject towerPrefab = towerUI.towerPrefabs[i];
+            // Get the tower health and attack components
+            TowerHealth towerHealth = towerPrefab.GetComponent<TowerHealth>();
+            TowerAttack towerAttack = towerPrefab.GetComponent<TowerAttack>();
+
+            towerHealth.setHealth((int)baseTowerValues[i].x);
+            towerAttack.UpgradeAttackSpeed(baseTowerValues[i].y);
+            towerAttack.UpgradeAttackDamage((int)baseTowerValues[i].z);
+            towerAttack.UpgradeRange((int)baseTowerValues[i].w);
+            Debug.Log("Set " + towerPrefab.name + " to base values.");
         }
     }
 

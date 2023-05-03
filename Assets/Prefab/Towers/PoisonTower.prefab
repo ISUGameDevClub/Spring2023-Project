@@ -235,7 +235,7 @@ MonoBehaviour:
   towerAttackSpeed: 1
   projectilePrefab: {fileID: 6666997490682916669, guid: d616820bcb36acf44a85dcbee8f3b0d8, type: 3}
   chainProjectilePrefab: {fileID: 0}
-  attackDamage: 25
+  attackDamage: 10
   towerType: 4
 --- !u!114 &-2396385069299387524
 MonoBehaviour:

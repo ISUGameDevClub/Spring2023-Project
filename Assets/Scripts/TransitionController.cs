@@ -9,10 +9,10 @@ public class TransitionController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftShift) && Input.GetMouseButtonDown(0))
-        {
-            FadeToNextLevel();
-        }
+        //if (Input.GetKey(KeyCode.LeftShift) && Input.GetMouseButtonDown(0))
+        //{
+        //    FadeToNextLevel();
+        //}
     }
 
     public void FadeToNextLevel()

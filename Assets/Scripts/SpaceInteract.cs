@@ -44,7 +44,7 @@ public class SpaceInteract : MonoBehaviour
         }
         
         //Sell a turret
-        if (currentState.state == 2 & GetComponent<TowerHealth>()!=null)
+        if (currentState.state == 2 & GetComponent<TowerHealth>()!=null && !FindObjectOfType<UniversalUpgradeSys>().shopActive)
         {
             BuildManager.instance.SetCondition(0);
             // if you destroy the object before getting the refund amount, wierd stuff happens?

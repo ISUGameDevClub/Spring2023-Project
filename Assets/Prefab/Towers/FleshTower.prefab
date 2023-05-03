@@ -515,8 +515,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 946fe516742bd8d428f5586916b31694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 450
-  totalHealth: 450
+  currentHealth: 500
+  totalHealth: 500
 --- !u!114 &8357451283412925866
 MonoBehaviour:
   m_ObjectHideFlags: 0

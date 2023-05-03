@@ -8,7 +8,7 @@ public class UniversalUpgradeSys : MonoBehaviour
     public Vector4[] baseTowerValues;
 
     private Animator shopAnims;
-    private bool shopActive;
+    public bool shopActive;
     private CurrencyManager currencyManager;
 
     [SerializeField] private TowerUI towerUI;

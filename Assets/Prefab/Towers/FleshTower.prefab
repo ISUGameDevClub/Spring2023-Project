@@ -516,7 +516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
-  totalHealth: 0
+  totalHealth: 500
 --- !u!114 &8357451283412925866
 MonoBehaviour:
   m_ObjectHideFlags: 0

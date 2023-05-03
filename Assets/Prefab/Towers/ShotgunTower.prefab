@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
-  totalHealth: 0
+  totalHealth: 200
 --- !u!114 &5077729786145225099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,10 +175,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d1d33d1e351b8a4cad5df3a73403c02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerAttackSpeed: 0
+  towerAttackSpeed: 1.5
   projectilePrefab: {fileID: 6434496924394768136, guid: 0831603921a23c54786f54b69427d744, type: 3}
   chainProjectilePrefab: {fileID: 0}
-  attackDamage: 0
+  attackDamage: 70
   towerType: 3
 --- !u!114 &8975797925218310313
 MonoBehaviour:

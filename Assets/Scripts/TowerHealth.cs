@@ -9,6 +9,11 @@ public class TowerHealth : MonoBehaviour
     int currentHealth;
     public int totalHealth;
 
+    public void Start()
+    {
+        currentHealth = totalHealth;
+    }
+
     public void loseHealth(int damage)
     {
         currentHealth = currentHealth - damage;

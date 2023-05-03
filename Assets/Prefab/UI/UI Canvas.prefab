@@ -4774,7 +4774,7 @@ MonoBehaviour:
   towerUI: {fileID: 0}
   towerUpgrades:
   - costLevels: 010000000200000003000000
-    healthLevels: 000000000000000000000000
+    healthLevels: 960000000000000000000000
     damageLevels: 000000000000000000000000
     attackSpeedLevels:
     - 0

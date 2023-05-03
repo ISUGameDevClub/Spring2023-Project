@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 608871288175180758}
   - component: {fileID: 3335161722075325462}
   - component: {fileID: 6993102545817119050}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: detectRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 6136265903696603148}
   - component: {fileID: -7148752259746864644}
   - component: {fileID: 1949740996672551942}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Enemy
   m_TagString: Enemy/Ground
   m_Icon: {fileID: 0}
@@ -113,6 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd559ca735aea44ba42fd95dfb1080d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyAnims: {fileID: 0}
   speed: 5
   towerDetectObject: {fileID: 0}
   bufferDistance: 0
@@ -145,6 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b05b2448632da9648adb9a850207c8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  guardEnemyDogPrefab: {fileID: 0}
   health: 50
 --- !u!212 &6136265903696603150
 SpriteRenderer:
@@ -262,7 +264,7 @@ GameObject:
   - component: {fileID: 4994415051481432797}
   - component: {fileID: 2351408889863176335}
   - component: {fileID: 7627575175611440249}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: attackRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}

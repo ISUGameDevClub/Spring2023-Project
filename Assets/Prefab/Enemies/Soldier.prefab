@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 946317828644557754}
   - component: {fileID: 3105801295640939642}
   - component: {fileID: 7232402280604549414}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: detectRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 2475143455705354197}
   - component: {fileID: 8570387030987762670}
   - component: {fileID: 2332236377131268761}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 7194183581397412412}
   - component: {fileID: 105811606505231003}
   - component: {fileID: 4170941138209625208}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Soldier
   m_TagString: Enemy/Ground
   m_Icon: {fileID: 0}
@@ -330,7 +330,7 @@ GameObject:
   - component: {fileID: 4619954620025645745}
   - component: {fileID: 2734595187318352099}
   - component: {fileID: 7820585473013691413}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: attackRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}

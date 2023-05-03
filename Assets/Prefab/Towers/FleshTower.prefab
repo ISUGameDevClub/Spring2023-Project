@@ -515,8 +515,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 946fe516742bd8d428f5586916b31694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 0
-  totalHealth: 500
+  currentHealth: 450
+  totalHealth: 450
 --- !u!114 &8357451283412925866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -561,3 +561,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   costInfo: {fileID: 11400000, guid: 9eda06abace12784dbcd57c10fce71f3, type: 2}
+  currencyRefundPercentage: 0.5

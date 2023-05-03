@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 946fe516742bd8d428f5586916b31694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 0
+  currentHealth: 250
   totalHealth: 250
 --- !u!114 &734352072981465574
 MonoBehaviour:
@@ -235,7 +235,7 @@ MonoBehaviour:
   towerAttackSpeed: 1
   projectilePrefab: {fileID: 6666997490682916669, guid: d616820bcb36acf44a85dcbee8f3b0d8, type: 3}
   chainProjectilePrefab: {fileID: 0}
-  attackDamage: 10
+  attackDamage: 25
   towerType: 4
 --- !u!114 &-2396385069299387524
 MonoBehaviour:
@@ -250,6 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   costInfo: {fileID: 11400000, guid: 4aa7a50dcef03ca42bad5d328dc2003e, type: 2}
+  currencyRefundPercentage: 0.5
 --- !u!1 &4593598473412489642
 GameObject:
   m_ObjectHideFlags: 0

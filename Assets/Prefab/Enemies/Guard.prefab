@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f56b477aa84e95f4ca216c858036f8b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyAttackSpeed: 1
+  enemyAttackSpeed: 0.6
   projectilePrefab: {fileID: 1868895473673010215, guid: 7c9364efdd76db04fbc79ceb1014dc9d, type: 3}
   attackDamage: 10
 --- !u!114 &3850303297872243293
@@ -340,7 +340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyAnims: {fileID: 0}
-  speed: 1.5
+  speed: 3
   towerDetectObject: {fileID: 3282187202551525500}
   bufferDistance: 1.2
   maxPlayerFollowRange: 4

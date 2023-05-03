@@ -273,9 +273,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f56b477aa84e95f4ca216c858036f8b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyAttackSpeed: 1
+  enemyAttackSpeed: 0.5
   projectilePrefab: {fileID: 1868895473673010215, guid: 7c9364efdd76db04fbc79ceb1014dc9d, type: 3}
-  attackDamage: 10
+  attackDamage: 13
 --- !u!114 &3850303297872243293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,7 +289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guardEnemyDogPrefab: {fileID: 0}
-  health: 150
+  health: 70
 --- !u!50 &8128330393044297706
 Rigidbody2D:
   serializedVersion: 4

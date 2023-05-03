@@ -183,7 +183,7 @@ public class WaveController : MonoBehaviour
             enemiesSpawned = false;
             StartCoroutine(beginNextWave());
         }
-        else if (finalWaveSpawned && enemyHolder.childCount == 0)
+        else if (finalWaveSpawned && enemyHolder.childCount == 0)   
         {
             // In this case, the last wave has finished. // Temporary measure for the GameShowcaseDemo.
             FindObjectOfType<TransitionController>().FadeToLevel(winScene);

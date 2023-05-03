@@ -323,8 +323,7 @@ RectTransform:
   - {fileID: 3606662871454884214}
   - {fileID: 1074815894266455096}
   - {fileID: 1841006680}
-  - {fileID: 6331539169887860384}
-  - {fileID: 5034115067891406639}
+  - {fileID: 5652219821704473440}
   - {fileID: 3986713110640626083}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1008,9 +1007,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1321487402684868188}
+      - m_Target: {fileID: 1131920925050236127}
         m_TargetAssemblyTypeName: UniversalUpgradeSys, Assembly-CSharp
-        m_MethodName: UpgradeTowerButton
+        m_MethodName: UpgradeTower
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1658,9 +1657,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1321487402684868188}
+      - m_Target: {fileID: 1131920925050236127}
         m_TargetAssemblyTypeName: UniversalUpgradeSys, Assembly-CSharp
-        m_MethodName: UpgradeTowerButton
+        m_MethodName: UpgradeTower
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1965,9 +1964,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1321487402684868188}
+      - m_Target: {fileID: 1131920925050236127}
         m_TargetAssemblyTypeName: UniversalUpgradeSys, Assembly-CSharp
-        m_MethodName: UpgradeTowerButton
+        m_MethodName: UpgradeTower
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2577,9 +2576,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1321487402684868188}
+      - m_Target: {fileID: 1131920925050236127}
         m_TargetAssemblyTypeName: UniversalUpgradeSys, Assembly-CSharp
-        m_MethodName: UpgradeTowerButton
+        m_MethodName: UpgradeTower
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2946,7 +2945,6 @@ GameObject:
   - component: {fileID: 6331539169887860384}
   - component: {fileID: 160103873066543891}
   - component: {fileID: 8618131481000738446}
-  - component: {fileID: 1321487402684868188}
   m_Layer: 5
   m_Name: UpgradePanel
   m_TagString: Untagged
@@ -2973,13 +2971,13 @@ RectTransform:
   - {fileID: 5698228187877723514}
   - {fileID: 6557053097032296224}
   - {fileID: 5566791442836369544}
-  m_Father: {fileID: 376495662518864624}
-  m_RootOrder: 4
+  m_Father: {fileID: 5652219821704473440}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 824, y: -75.8273}
-  m_SizeDelta: {x: -1607.219, y: -503.71472}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 270, y: 299.84198}
+  m_SizeDelta: {x: 312.781, y: 576.7084}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &160103873066543891
 CanvasRenderer:
@@ -3019,80 +3017,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1321487402684868188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5692087244900581021}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3cf9fee38a7a594d99888e4c12e1ecd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  towerUI: {fileID: 0}
-  towerUpgrades:
-  - healthLevels: 0000000000000000000000000000000000000000
-    damageLevels: 0000000000000000000000000000000000000000
-    attackSpeedLevels:
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    rangeLevels: 0000000000000000000000000000000000000000
-    level: 0
-  - healthLevels: 0000000000000000000000000000000000000000
-    damageLevels: 0000000000000000000000000000000000000000
-    attackSpeedLevels:
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    rangeLevels: 0000000000000000000000000000000000000000
-    level: 0
-  - healthLevels: 0000000000000000000000000000000000000000
-    damageLevels: 0000000000000000000000000000000000000000
-    attackSpeedLevels:
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    rangeLevels: 0000000000000000000000000000000000000000
-    level: 0
-  - healthLevels: 0000000000000000000000000000000000000000
-    damageLevels: 0000000000000000000000000000000000000000
-    attackSpeedLevels:
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    rangeLevels: 0000000000000000000000000000000000000000
-    level: 0
-  - healthLevels: 0000000000000000000000000000000000000000
-    damageLevels: 0000000000000000000000000000000000000000
-    attackSpeedLevels:
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    rangeLevels: 0000000000000000000000000000000000000000
-    level: 0
-  - healthLevels: 0000000000000000000000000000000000000000
-    damageLevels: 0000000000000000000000000000000000000000
-    attackSpeedLevels:
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    rangeLevels: 0000000000000000000000000000000000000000
-    level: 0
 --- !u!1 &5816794765141657182
 GameObject:
   m_ObjectHideFlags: 0
@@ -3630,9 +3554,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1321487402684868188}
+      - m_Target: {fileID: 1131920925050236127}
         m_TargetAssemblyTypeName: UniversalUpgradeSys, Assembly-CSharp
-        m_MethodName: UpgradeTowerButton
+        m_MethodName: UpgradeTower
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3725,9 +3649,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1321487402684868188}
+      - m_Target: {fileID: 1131920925050236127}
         m_TargetAssemblyTypeName: UniversalUpgradeSys, Assembly-CSharp
-        m_MethodName: UpgradeTowerButton
+        m_MethodName: UpgradeTower
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3825,8 +3749,8 @@ GameObject:
   - component: {fileID: 5034115067891406639}
   - component: {fileID: 2434940926698356972}
   - component: {fileID: 1959734438572224240}
-  - component: {fileID: 1845123527470721486}
   - component: {fileID: 1803457988286922236}
+  - component: {fileID: 5818367748630931966}
   m_Layer: 5
   m_Name: Grandma
   m_TagString: Untagged
@@ -3841,17 +3765,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6521460212475987986}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 376495662518864624}
-  m_RootOrder: 5
+  m_Father: {fileID: 5652219821704473440}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 872, y: -375.66925}
+  m_AnchoredPosition: {x: 0.000061035156, y: -0.000030517578}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2434940926698356972
@@ -3892,26 +3816,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!95 &1845123527470721486
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6521460212475987986}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d33141fb2bf79a449b0796cc7b5357f8, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
 --- !u!114 &1803457988286922236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3956,6 +3860,26 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!95 &5818367748630931966
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6521460212475987986}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d33141fb2bf79a449b0796cc7b5357f8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &6571360066350935694
 GameObject:
   m_ObjectHideFlags: 0
@@ -4467,6 +4391,140 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &7628992771545450685
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5652219821704473440}
+  - component: {fileID: 7986188517508309046}
+  - component: {fileID: 1131920925050236127}
+  m_Layer: 5
+  m_Name: UpgradeShop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5652219821704473440
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7628992771545450685}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6331539169887860384}
+  - {fileID: 5034115067891406639}
+  m_Father: {fileID: 376495662518864624}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 872, y: -375.66925}
+  m_SizeDelta: {x: 150, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &7986188517508309046
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7628992771545450685}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 242933db127f0f044afc9962fd53196c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &1131920925050236127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7628992771545450685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3cf9fee38a7a594d99888e4c12e1ecd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerUI: {fileID: 0}
+  towerUpgrades:
+  - healthLevels: 0000000000000000000000000000000000000000
+    damageLevels: 0000000000000000000000000000000000000000
+    attackSpeedLevels:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    rangeLevels: 0000000000000000000000000000000000000000
+    level: 0
+  - healthLevels: 0000000000000000000000000000000000000000
+    damageLevels: 0000000000000000000000000000000000000000
+    attackSpeedLevels:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    rangeLevels: 0000000000000000000000000000000000000000
+    level: 0
+  - healthLevels: 0000000000000000000000000000000000000000
+    damageLevels: 0000000000000000000000000000000000000000
+    attackSpeedLevels:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    rangeLevels: 0000000000000000000000000000000000000000
+    level: 0
+  - healthLevels: 0000000000000000000000000000000000000000
+    damageLevels: 0000000000000000000000000000000000000000
+    attackSpeedLevels:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    rangeLevels: 0000000000000000000000000000000000000000
+    level: 0
+  - healthLevels: 0000000000000000000000000000000000000000
+    damageLevels: 0000000000000000000000000000000000000000
+    attackSpeedLevels:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    rangeLevels: 0000000000000000000000000000000000000000
+    level: 0
+  - healthLevels: 0000000000000000000000000000000000000000
+    damageLevels: 0000000000000000000000000000000000000000
+    attackSpeedLevels:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    rangeLevels: 0000000000000000000000000000000000000000
+    level: 0
 --- !u!1 &7666983767321033737
 GameObject:
   m_ObjectHideFlags: 0
@@ -4928,7 +4986,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 376495662518864624}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}

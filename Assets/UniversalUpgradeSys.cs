@@ -6,6 +6,7 @@ public class UniversalUpgradeSys : MonoBehaviour
 {
     private Animator shopAnims;
     private bool shopActive;
+    private CurrencyManager currencyManager;
 
     [SerializeField] private TowerUI towerUI;
     [SerializeField] private List<TowerUpgrade> towerUpgrades = new List<TowerUpgrade>();
@@ -14,6 +15,7 @@ public class UniversalUpgradeSys : MonoBehaviour
     {
         towerUI = FindObjectOfType<TowerUI>();
         shopAnims = GetComponent<Animator>();
+        currencyManager = FindObjectOfType<CurrencyManager>();
         shopActive = false;
 
         // Initialize the tower levels to 0
@@ -49,12 +51,20 @@ public class UniversalUpgradeSys : MonoBehaviour
         int damage = upgrade.damageLevels[upgrade.level];
         float attackSpeed = upgrade.attackSpeedLevels[upgrade.level];
         int range = upgrade.rangeLevels[upgrade.level];
+        int cost = upgrade.costLevels[upgrade.level];
+
+        if(!currencyManager.CanPlayerAfford(cost))
+        {
+            Debug.Log("Can't afford this...");
+            return;
+        }
 
         // Upgrade the tower health and attack components
         towerHealth.setHealth(health);
         towerAttack.UpgradeAttackDamage(damage);
         towerAttack.UpgradeAttackSpeed(attackSpeed);
         towerAttack.UpgradeRange(range);
+        currencyManager.SubtractCurrency(cost);
         Debug.Log("Upgraded " + towerPrefab.name + " to level " + upgrade.level);
 
         // Upgrade all instances of the tower in the scene
@@ -92,11 +102,17 @@ public class UniversalUpgradeSys : MonoBehaviour
             shopAnims.SetTrigger("closeshop");
         }
     }
+    public int GetCurrentCost(int towerIndex)
+    {
+        int currCost = towerUpgrades[towerIndex].costLevels[towerUpgrades[towerIndex].level];
+        return currCost;
+    }
 }
 
 [System.Serializable]
 public class TowerUpgrade
 {
+    public List<int> costLevels = new List<int>();
     public List<int> healthLevels = new List<int>();
     public List<int> damageLevels = new List<int>();
     public List<float> attackSpeedLevels = new List<float>();

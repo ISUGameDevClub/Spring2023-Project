@@ -18,7 +18,13 @@ public class PlayerAnimsHelper : MonoBehaviour
 
     public void ResetToWave()
     {
-        FindObjectOfType<WaveController>().WaveNumber = 5;
+        //this needs to be a reset to the last completed wave!!!
         FindObjectOfType<TransitionController>().ResetCurrentScene();
     }
+
+    //public void HaltPlayerActions()
+    //{
+    //    //FindObjectOfType<PlayerMovement>().canWalk = false;
+    //    //FindObjectOfType<Shooting>().canShoot = false;
+    //}
 }

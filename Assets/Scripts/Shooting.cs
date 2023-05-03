@@ -28,12 +28,12 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            if (Input.GetButton("Fire1") && canFire && gameManager.GetComponent<StateController>().state == 0)
-            {
-                Shoot();
-                canFire = false;
-                StartCoroutine(fireWait());
-            }
+        if (Input.GetButton("Fire1") && canFire && gameManager.GetComponent<StateController>().state == 0 && !playerAnims.GetBool("death"))
+        {
+            Shoot();
+            canFire = false;
+            StartCoroutine(fireWait());
+        }
     }
     void Attack()
     {

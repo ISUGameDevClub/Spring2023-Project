@@ -43671,7 +43671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHolder: {fileID: 1204904557}
-  winScene: 
+  winScene: FinalVictory
   northSpawn: {fileID: 768546315}
   northEastSpawn: {fileID: 554316632}
   eastSpawn: {fileID: 650176490}
@@ -43812,6 +43812,22 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3634135085220450767, guid: 73fb226742262fa4bbdb4131442fa9b4, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3634135085220450767, guid: 73fb226742262fa4bbdb4131442fa9b4, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3634135085220450767, guid: 73fb226742262fa4bbdb4131442fa9b4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3634135085220450767, guid: 73fb226742262fa4bbdb4131442fa9b4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3634135085246338199, guid: 73fb226742262fa4bbdb4131442fa9b4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -43889,6 +43905,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3634135087029513730, guid: 73fb226742262fa4bbdb4131442fa9b4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683557510255753262, guid: 73fb226742262fa4bbdb4131442fa9b4, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683557510255753262, guid: 73fb226742262fa4bbdb4131442fa9b4, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683557510255753262, guid: 73fb226742262fa4bbdb4131442fa9b4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683557510255753262, guid: 73fb226742262fa4bbdb4131442fa9b4, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}

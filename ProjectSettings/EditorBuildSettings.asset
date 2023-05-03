@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/GameShowcaseDemo1.unity
     guid: ebc8f52ec18ce044f818502f88326a3b
   - enabled: 1
+    path: Assets/Scenes/FINALSCENES/FinalVictory.unity
+    guid: 004fcc947dc59fe408f0a9af0d7934d3
+  - enabled: 0
     path: Assets/Scenes/DemoVictory.unity
     guid: 81c2c843fce85c64cb766e5b21fa2ae0
   - enabled: 0

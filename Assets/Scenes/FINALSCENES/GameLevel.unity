@@ -550,7 +550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHolder: {fileID: 170451131}
-  winScene: DemoVictory
+  winScene: FinalVictory
   northSpawn: {fileID: 1610316823}
   northEastSpawn: {fileID: 206433955}
   eastSpawn: {fileID: 1585914253}
@@ -560,8 +560,8 @@ MonoBehaviour:
   westSpawn: {fileID: 1293039505}
   northWestSpawn: {fileID: 1181048170}
   waves:
-  - {fileID: 11400000, guid: f7be3a798809b3e4190b49dbbb89006e, type: 2}
-  - {fileID: 11400000, guid: f7be3a798809b3e4190b49dbbb89006e, type: 2}
+  - {fileID: 11400000, guid: 12c93071154900741ba71547c4488141, type: 2}
+  - {fileID: 11400000, guid: fbc6069af45676448a773fc1ee8c5fd2, type: 2}
   setupTimes:
   - 5
   - 5

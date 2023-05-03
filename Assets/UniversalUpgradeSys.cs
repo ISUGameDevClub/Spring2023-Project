@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class UniversalUpgradeSys : MonoBehaviour
 {
+    private Animator shopAnims;
+    private bool shopActive;
+
     [SerializeField] private TowerUI towerUI;
     [SerializeField] private List<TowerUpgrade> towerUpgrades = new List<TowerUpgrade>();
 
     private void Start()
     {
         towerUI = FindObjectOfType<TowerUI>();
+        shopAnims = GetComponent<Animator>();
+        shopActive = false;
 
         // Initialize the tower levels to 0
         for (int i = 0; i < towerUpgrades.Count; i++)
@@ -50,6 +55,7 @@ public class UniversalUpgradeSys : MonoBehaviour
         towerAttack.UpgradeAttackDamage(damage);
         towerAttack.UpgradeAttackSpeed(attackSpeed);
         towerAttack.UpgradeRange(range);
+        Debug.Log("Upgraded " + towerPrefab.name + " to level " + upgrade.level);
 
         // Upgrade all instances of the tower in the scene
         GameObject[] activeTowers = GameObject.FindGameObjectsWithTag("Tower");
@@ -70,6 +76,21 @@ public class UniversalUpgradeSys : MonoBehaviour
 
         // Increase the tower level for the next upgrade
         upgrade.level = Mathf.Min(upgrade.level + 1, upgrade.healthLevels.Count - 1);
+    }
+
+    //Animation-Button Shtuff
+    public void ShopButton()
+    {
+        if (!shopActive)
+        {
+            shopActive = true;
+            shopAnims.SetTrigger("openshop");
+        }
+        else
+        {
+            shopActive = false;
+            shopAnims.SetTrigger("closeshop");
+        }
     }
 }
 

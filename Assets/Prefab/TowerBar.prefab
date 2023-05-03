@@ -701,12 +701,13 @@ MonoBehaviour:
   - Wall o' Flesh
   towerInfo: {fileID: 6648538238430605373}
   towerInfos:
-  - LOREM ISPUM
-  - LOREM ISPUM
-  - LOREM ISPUM
-  - LOREM ISPUM
-  - LOREM ISPUM
-  - LOREM ISPUM
+  - Medium-ranged tower. Medium attack speed.
+  - Short-ranged tower. Fast attack speed. Fires three projectiles in a spread.
+  - Long-ranged tower. Medium attack speed. Fast projectiles.
+  - Short-ranged tower. Medium attack speed. Chains damage across nearby enemies.
+  - Short-ranged tower. Medium attack speed. Leaves a toxic damaging sludge on the
+    floor.
+  - Wall-type tower. High health.
 --- !u!95 &849055649204315765
 Animator:
   serializedVersion: 5

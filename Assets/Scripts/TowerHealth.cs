@@ -5,11 +5,14 @@ using UnityEngine;
 public class TowerHealth : MonoBehaviour
 {
 
-    [SerializeField] int health;
+    [SerializeField] 
+    int currentHealth;
+    public int totalHealth;
+
     public void loseHealth(int damage)
     {
-        health = health - damage;
-        if (health <= 0)
+        currentHealth = currentHealth - damage;
+        if (currentHealth <= 0)
         {
             GameObject.Find("SoundController").GetComponent<Sound>().SpawnSound("TowerDestroy");
             Destroy(gameObject);
@@ -18,16 +21,27 @@ public class TowerHealth : MonoBehaviour
 
     public void gainHealth(int heal)
     {
-        health = health + heal;
+        currentHealth += heal;
     }
 
     public void levelUpHealth(int inhealth)
     {
-        health = inhealth;
+        totalHealth += inhealth;
+        currentHealth += inhealth;
     }
 
     public void setHealth(int newHealth)
     {
-        this.health = newHealth;
+        currentHealth += newHealth - totalHealth;
+        totalHealth = newHealth;
+    }
+
+    public float GetHealthPercent()
+    {
+        if(currentHealth == 0 && totalHealth == 0)
+        {
+            return 0;
+        }
+        return (float)currentHealth / (float)totalHealth;
     }
 }

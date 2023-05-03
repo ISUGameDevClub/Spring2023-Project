@@ -5,19 +5,19 @@ using UnityEngine.UI;
 
 public class AudioController : MonoBehaviour
 {
-    GameObject gm;
+    GameObject am;
     Slider volumeSlider;
 
     public void Awake()
     {
-        gm = GameObject.Find("GameManager");
+        am = GameObject.Find("AudioManager");
         volumeSlider = GetComponent<Slider>();
-        volumeSlider.value = gm.GetComponent<GameManager>().GetMasterListenerVolume();
+        volumeSlider.value = am.GetComponent<AudioManager>().GetMasterListenerVolume();
     }
 
     public void SetVolume(float newVolume)
     {
-        gm.GetComponent<GameManager>().SetMasterListenerVolume(newVolume);
+        am.GetComponent<AudioManager>().SetMasterListenerVolume(newVolume);
         AudioListener.volume = newVolume;
         //Debug.Log("Volume = " + AudioListener.volume);
     }

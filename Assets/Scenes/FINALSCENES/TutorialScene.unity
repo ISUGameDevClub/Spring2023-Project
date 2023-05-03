@@ -44878,6 +44878,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4029205086400833122, guid: 73fb226742262fa4bbdb4131442fa9b4, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6683557510255753262, guid: 73fb226742262fa4bbdb4131442fa9b4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -44985,6 +44989,10 @@ PrefabInstance:
     - target: {fileID: 7956634031240213678, guid: 73fb226742262fa4bbdb4131442fa9b4, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9143703288160669492, guid: 73fb226742262fa4bbdb4131442fa9b4, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 16777215
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73fb226742262fa4bbdb4131442fa9b4, type: 3}

@@ -22,7 +22,8 @@ public class WaveTrackerUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        textGUI.text = "Wave: " + waveController.WaveNumber;
+        Debug.Log(waveController.WaveNumber);
+        textGUI.text = "Wave: " + (waveController.WaveNumber + 1);
 
         if(waveController.isSetupPhase())
         {

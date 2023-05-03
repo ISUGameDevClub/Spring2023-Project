@@ -18,6 +18,11 @@ public class MainMenuScript : MonoBehaviour
         Application.Quit();
     }
 
+    public void ChangeSong(string newSong)
+    {
+        FindObjectOfType<AudioManager>().Play(newSong);
+    }
+
     //Options Menu functions
 
 }

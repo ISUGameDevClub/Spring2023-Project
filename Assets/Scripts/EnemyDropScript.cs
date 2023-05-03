@@ -23,7 +23,6 @@ public class EnemyDropScript : MonoBehaviour
     {
         if(evaluateDropSuccess(currencyDropProbability))
         {
-            Debug.Log("A1. Drop money SUCCESS");
             CurrencyManager.instance.AddCurrency(currencyDropAmount);
         }
        /* if(seedDropProbability == 1f || (seedDropProbability > 0 && evaluateDropSuccess(seedDropProbability)))

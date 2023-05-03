@@ -13,6 +13,10 @@ public class WaveController : MonoBehaviour
     public Transform enemyHolder;
     private bool shouldSkipSetup = false;
 
+    //Tracker variables for Gian's WaveTracker.
+    private int enemiesSpawnedInGroup;
+    private float currentSetupTimeElapsed;
+
     // Temporary measure for GameShowcaseDemo
     [SerializeField]
     private string winScene;
@@ -85,6 +89,8 @@ public class WaveController : MonoBehaviour
     
     private IEnumerator beginNextWave()
     {
+        enemiesSpawnedInGroup = 0;
+        currentSetupTimeElapsed = 0;
         yield return StartCoroutine(CompleteSetupPhase(WaveNumber));
         yield return StartCoroutine(BeginActivePhase(WaveNumber));
         WaveNumber++;
@@ -110,6 +116,7 @@ public class WaveController : MonoBehaviour
                 if (shouldSkipSetup) break;
                 yield return new WaitForSeconds(skipCheckInterval);
                 timeElapsed += skipCheckInterval;
+                currentSetupTimeElapsed = timeElapsed;
             }
         }
         shouldSkipSetup = false;
@@ -133,6 +140,7 @@ public class WaveController : MonoBehaviour
             {
                 yield return new WaitForSeconds(currentGroup.spawnDelays[e]);
                 Instantiate(currentGroup.enemiesToSpawn[e], getSpawnTransform(currentGroup.spawnLocations[e]).position, Quaternion.identity, enemyHolder);
+                enemiesSpawnedInGroup++;
             }
         }
         enemiesSpawned = true;
@@ -171,5 +179,23 @@ public class WaveController : MonoBehaviour
             // In this case, the last wave has finished. // Temporary measure for the GameShowcaseDemo.
             FindObjectOfType<TransitionController>().FadeToLevel(winScene);
         }
+    }
+
+    //Helper methods Gian added to help with wave tracking.
+    public int GetWaveAmt()
+    {
+        return waves[WaveNumber].spawnGroups[0].enemiesToSpawn.Length;
+    }
+    public int GetEnemiesSpawned()
+    {
+        return enemiesSpawnedInGroup;
+    }
+    public float GetSetupTime()
+    {
+        return setupTimes[WaveNumber];
+    }
+    public float GetSetupTimeElapsed()
+    {
+        return currentSetupTimeElapsed;
     }
 }

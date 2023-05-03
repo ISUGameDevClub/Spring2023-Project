@@ -65,7 +65,7 @@ public class TowerAttack : MonoBehaviour
         attackCoroutineRunning = true;
         //sorts all of the objects in the array in order by distance.
         var target = collidersInside.OrderBy(go => (transform.position - go.transform.position).sqrMagnitude).ToList();
-        Debug.Log(towerType);
+        //Debug.Log(towerType);
         if (target.Any(item => item.GetComponent<EnemyHealth>()))
         {
 

@@ -33,7 +33,7 @@ public class BuildManager : MonoBehaviour
         currentCondition = 0;
 
         purchase = GameObject.Find("GameManager").GetComponent<CurrencyManager>();
-        Debug.Log("Currency Manager present");
+        //Debug.Log("Currency Manager present");
         towerPlaceSound = GameObject.Find("SoundController").GetComponent<Sound>();
         towerUI = GameObject.Find("TowerBar").GetComponent<TowerUI>();
     }

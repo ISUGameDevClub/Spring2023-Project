@@ -19,12 +19,20 @@ public class EnemyHealth : MonoBehaviour
             {
                 Instantiate(guardEnemyDogPrefab, transform.position, transform.rotation, null);
             }
-            Destroy(gameObject);
+            GetComponentInParent<Animator>().SetTrigger("death");
+            GetComponent<EnemyMovement>().enabled = false;
+            GetComponent<EnemyMeleeAttackManager>().enabled = false;
         }
     }
 
     public void gainHealth(int heal)
     {
         health = health + heal;
+    }
+
+    //Animator Method
+    public void DestroyObject()
+    {
+        Destroy(gameObject);
     }
 }

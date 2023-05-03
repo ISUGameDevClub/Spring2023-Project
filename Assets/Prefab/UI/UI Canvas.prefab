@@ -1991,7 +1991,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: WAVE PROGRESS
+  m_text: 'WAVE: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9e74989c43490084eb89044bea94d2d6, type: 2}
   m_sharedMaterial: {fileID: -2362327890685007886, guid: 9e74989c43490084eb89044bea94d2d6, type: 2}
@@ -2344,7 +2344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.109024554, g: 0.41972932, b: 0.6603774, a: 1}
+  m_Color: {r: 0.1, g: 0.4, b: 0.6, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5097,6 +5097,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3606662871454884214}
   - component: {fileID: 6414293361989237249}
+  - component: {fileID: 5413680791883101679}
   m_Layer: 5
   m_Name: WaveTracker
   m_TagString: Untagged
@@ -5175,10 +5176,23 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.667
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5413680791883101679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7956634031240213678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d5464db71746ef4389c08b7e8efef5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveFill: {fileID: 6903840959519071604}
 --- !u!1 &8595283857017494712
 GameObject:
   m_ObjectHideFlags: 0

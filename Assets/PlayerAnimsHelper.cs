@@ -15,4 +15,10 @@ public class PlayerAnimsHelper : MonoBehaviour
     {
         
     }
+
+    public void ResetToWave()
+    {
+        FindObjectOfType<WaveController>().WaveNumber = 5;
+        FindObjectOfType<TransitionController>().ResetCurrentScene();
+    }
 }

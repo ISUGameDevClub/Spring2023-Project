@@ -15,10 +15,7 @@ public class AudioManager : MonoBehaviour
 
     public float fadeTime;
     private List<float> fadeTimeRemaining;
-    void Start()
-    {
-        masterListenerVolume = 1f;
-    }
+
 
     public void SetMasterListenerVolume(float volume)
     {
@@ -47,6 +44,8 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
+
+        masterListenerVolume = 1f;
         fadeTimeRemaining = new List<float>();
 
         // Start by playing first sound, written in editor

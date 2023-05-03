@@ -25,4 +25,9 @@ public class TowerHealth : MonoBehaviour
     {
         health = inhealth;
     }
+
+    public void setHealth(int newHealth)
+    {
+        this.health = newHealth;
+    }
 }

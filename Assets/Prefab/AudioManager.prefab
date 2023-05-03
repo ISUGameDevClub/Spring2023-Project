@@ -46,17 +46,65 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   readySounds: []
   soundBank:
-  - name: BGM
-    clip: {fileID: 8300000, guid: a02b4ff653db5d848b8ab9f4746ca385, type: 3}
+  - name: MainMenu
+    clip: {fileID: 8300000, guid: df2444093af99fb47a7db6f49f991231, type: 3}
     volume: 0.5
     pitch: 1
     loop: 1
     source: {fileID: 0}
-  - name: BGM2
-    clip: {fileID: 8300000, guid: 40a24fb9c3f1096439f5a02da1e24d1f, type: 3}
+  - name: Setup1
+    clip: {fileID: 8300000, guid: 001507199d53f034ca7323ee72691f9f, type: 3}
     volume: 0.5
     pitch: 1
     loop: 1
     source: {fileID: 0}
-  firstSongName: BGM
+  - name: Attack1
+    clip: {fileID: 8300000, guid: 8b8159556c7cfdb4180581b3fc59b794, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Setup2
+    clip: {fileID: 8300000, guid: 8d2121e50506cbb41bc305d7b68a6b62, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Attack2
+    clip: {fileID: 8300000, guid: 8e1f577af6fdf9f4d90b17c9b1b0f133, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Setup3
+    clip: {fileID: 8300000, guid: a35188ce37ca4ab4ab24b577aff01a1a, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Attack3
+    clip: {fileID: 8300000, guid: 2fe67ff6b2c626a4db9739dcb71a44f2, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: FinalAttack
+    clip: {fileID: 8300000, guid: 97a222183d295bf49a5313c0a68451fe, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: VictoryTheme
+    clip: {fileID: 8300000, guid: 0ed101955dabf9947a706099b4c4cdf4, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: DeathTheme
+    clip: {fileID: 8300000, guid: 78f9f3420175aaf47aa97ad7329049a7, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  firstSongName: MainMenu
   fadeTime: 2

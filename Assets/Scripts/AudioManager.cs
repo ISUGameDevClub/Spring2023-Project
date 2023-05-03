@@ -104,14 +104,14 @@ public class AudioManager : MonoBehaviour
     private void Update()
     {
         
-        // for testing bgm fade
-        if (Input.GetKeyDown(KeyCode.O)) {
-            Play("BGM2");
-        }
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            Play("BGM");
-        }
+        //// for testing bgm fade
+        //if (Input.GetKeyDown(KeyCode.O)) {
+        //    Play("BGM2");
+        //}
+        //if (Input.GetKeyDown(KeyCode.I))
+        //{
+        //    Play("BGM");
+        //}
 
 
         // handle fades

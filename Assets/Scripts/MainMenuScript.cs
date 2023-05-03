@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 public class MainMenuScript : MonoBehaviour
 {
     // Main Menu functions
-    public void PlayGame()
+    public void SceneChange(string newScene)
     {
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        FindObjectOfType<TransitionController>().FadeToLevel("GameShowcaseDemo1");
+        Debug.Log("changing scene to " + newScene);
+        FindObjectOfType<TransitionController>().FadeToLevel(newScene);
     }
 
     public void ExitGame()

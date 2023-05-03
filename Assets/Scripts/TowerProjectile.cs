@@ -21,9 +21,9 @@ public class TowerProjectile : MonoBehaviour
     {
         transform.Translate(new Vector2(1, 0) * speed * Time.deltaTime);
 
-        // Rotate the projectile to face its movement direction
-        Vector2 direction = new Vector2(1, 0);
-        transform.LookAt(transform.position + new Vector3(direction.x, direction.y, 0));
+        //// Rotate the projectile to face its movement direction
+        //Vector2 direction = new Vector2(1, 0);
+        //transform.LookAt(transform.position + new Vector3(direction.x, direction.y, 0));
 
         if (Time.time >= timeStop)
         {

@@ -248,6 +248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   costInfo: {fileID: 11400000, guid: 4aa7a50dcef03ca42bad5d328dc2003e, type: 2}
+  currencyRefundPercentage: 0.5
 --- !u!1 &7369787981561158227
 GameObject:
   m_ObjectHideFlags: 0

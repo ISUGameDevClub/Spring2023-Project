@@ -17,6 +17,10 @@ public class BuildCost : MonoBehaviour
     [SerializeField]
     CostInfoObject costInfo;
 
+    [SerializeField]
+    [Range(0f, 1f)]
+    private float currencyRefundPercentage;
+
     public int getCurrencyCost()
     {
         return costInfo.currencyCost;
@@ -25,5 +29,10 @@ public class BuildCost : MonoBehaviour
     public int getSeedCost()
     {
         return costInfo.seedCost;
+    }
+
+    public int getCurrencyRefundAmount()
+    {
+        return (int)(currencyRefundPercentage * costInfo.currencyCost);
     }
 }

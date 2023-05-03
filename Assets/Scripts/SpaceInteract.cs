@@ -47,7 +47,10 @@ public class SpaceInteract : MonoBehaviour
         if (currentState.state == 2 & GetComponent<TowerHealth>()!=null)
         {
             BuildManager.instance.SetCondition(0);
+            // if you destroy the object before getting the refund amount, wierd stuff happens?
+            int refundAmount = gameObject.GetComponent<BuildCost>().getCurrencyRefundAmount();
             Destroy(gameObject);
+            CurrencyManager.instance.AddCurrency(refundAmount);
         }
     }
 

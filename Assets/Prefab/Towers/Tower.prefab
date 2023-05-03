@@ -345,3 +345,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   costInfo: {fileID: 11400000, guid: 9eda06abace12784dbcd57c10fce71f3, type: 2}
+  currencyRefundPercentage: 0.5

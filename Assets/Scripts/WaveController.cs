@@ -12,6 +12,7 @@ public class WaveController : MonoBehaviour
     private phaseType currentPhaseType;
     public Transform enemyHolder;
     private bool shouldSkipSetup = false;
+    private bool finalWaveSpawned = false;
 
     //Tracker variables for Gian's WaveTracker.
     private int enemiesSpawnedInGroup;
@@ -93,7 +94,15 @@ public class WaveController : MonoBehaviour
         currentSetupTimeElapsed = 0;
         yield return StartCoroutine(CompleteSetupPhase(WaveNumber));
         yield return StartCoroutine(BeginActivePhase(WaveNumber));
-        WaveNumber++;
+        // Quick fix to avoid index out of bounds error
+        if(WaveNumber < waves.Length - 1)
+        {
+            WaveNumber++;
+        }
+        else
+        {
+            finalWaveSpawned = true;
+        }
         Debug.Log("WaveNumber: " + WaveNumber);
     }
 
@@ -169,12 +178,12 @@ public class WaveController : MonoBehaviour
         // This could potentially/should be changed in the future, I'm checking if all enemies are dead by counting the children of an enemyHolder transform.
         // This method could cause issues with the dog enemy. If the dog enemy is the last one to die, then theoretically, it could start the next wave before spawning
         // the dogs.
-        if (enemyHolder.childCount == 0 && enemiesSpawned && WaveNumber < waves.Length)
+        if (enemyHolder.childCount == 0 && enemiesSpawned && !finalWaveSpawned)
         {
             enemiesSpawned = false;
             StartCoroutine(beginNextWave());
         }
-        else if (WaveNumber == waves.Length && enemyHolder.childCount == 0)
+        else if (finalWaveSpawned && enemyHolder.childCount == 0)
         {
             // In this case, the last wave has finished. // Temporary measure for the GameShowcaseDemo.
             FindObjectOfType<TransitionController>().FadeToLevel(winScene);

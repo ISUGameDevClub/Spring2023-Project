@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    float masterListenerVolume;
 
     public static GameManager instance;
 
@@ -26,18 +25,5 @@ public class GameManager : MonoBehaviour
     }
 
         // Start is called before the first frame update
-    void Start()
-    {
-        masterListenerVolume = 1f;
-    }
 
-    public void SetMasterListenerVolume(float volume)
-    {
-        masterListenerVolume = volume;
-    }
-
-    public float GetMasterListenerVolume()
-    {
-        return masterListenerVolume;
-    }
 }

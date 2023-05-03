@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 public class AudioManager : MonoBehaviour
 {
+    float masterListenerVolume;
     public List<AudioManagerSound> readySounds;
     public List<AudioManagerSound> soundBank;
 
@@ -14,7 +15,20 @@ public class AudioManager : MonoBehaviour
 
     public float fadeTime;
     private List<float> fadeTimeRemaining;
+    void Start()
+    {
+        masterListenerVolume = 1f;
+    }
 
+    public void SetMasterListenerVolume(float volume)
+    {
+        masterListenerVolume = volume;
+    }
+
+    public float GetMasterListenerVolume()
+    {
+        return masterListenerVolume;
+    }
     void Awake()
     {
         // Make sure new scenes don't have any extra AudioManagers since this one persists

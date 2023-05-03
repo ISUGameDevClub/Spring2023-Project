@@ -21,8 +21,6 @@ public class TowerInfoUI : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(isHovering);
-
         if (isHovering && !UIElement.activeSelf)
         {
             UIElement.SetActive(true);

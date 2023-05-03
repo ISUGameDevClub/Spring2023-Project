@@ -51,6 +51,23 @@ public class UniversalUpgradeSys : MonoBehaviour
         towerAttack.UpgradeAttackSpeed(attackSpeed);
         towerAttack.UpgradeRange(range);
 
+        // Upgrade all instances of the tower in the scene
+        GameObject[] activeTowers = GameObject.FindGameObjectsWithTag("Tower");
+        foreach (GameObject tower in activeTowers)
+        {
+            if (tower.name == towerPrefab.name + "(Clone)")
+            {
+                // Upgrade the tower health and attack components
+                TowerHealth healthComponent = tower.GetComponent<TowerHealth>();
+                TowerAttack attackComponent = tower.GetComponent<TowerAttack>();
+
+                healthComponent.setHealth(health);
+                attackComponent.UpgradeAttackDamage(damage);
+                attackComponent.UpgradeAttackSpeed(attackSpeed);
+                attackComponent.UpgradeRange(range);
+            }
+        }
+
         // Increase the tower level for the next upgrade
         upgrade.level = Mathf.Min(upgrade.level + 1, upgrade.healthLevels.Count - 1);
     }

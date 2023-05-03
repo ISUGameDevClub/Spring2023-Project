@@ -934,6 +934,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7631834293713996166}
   - component: {fileID: 4193614576230859028}
+  - component: {fileID: 5747341268382933731}
   m_Layer: 5
   m_Name: UpgBasic
   m_TagString: Untagged
@@ -1019,6 +1020,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5747341268382933731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117629807596730897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b585861e29b829641bc502f11bc313c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plusIcon: {fileID: 8595283857017494712}
+  xIcon: {fileID: 7533771228792627600}
 --- !u!1 &2560172480754303762
 GameObject:
   m_ObjectHideFlags: 0
@@ -1733,6 +1748,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5698228187877723514}
   - component: {fileID: 4675246205161246374}
+  - component: {fileID: 2210031735309954789}
   m_Layer: 5
   m_Name: UpgChain
   m_TagString: Untagged
@@ -1818,6 +1834,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2210031735309954789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4149558050880889928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b585861e29b829641bc502f11bc313c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plusIcon: {fileID: 4434118354781213900}
+  xIcon: {fileID: 1282028244850131460}
 --- !u!1 &4165436015970587110
 GameObject:
   m_ObjectHideFlags: 0
@@ -2040,6 +2070,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6557053097032296224}
   - component: {fileID: 667944772679831008}
+  - component: {fileID: 2194640548967052329}
   m_Layer: 5
   m_Name: UpgToxic
   m_TagString: Untagged
@@ -2125,6 +2156,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2194640548967052329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4429794444062550434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b585861e29b829641bc502f11bc313c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plusIcon: {fileID: 7183058723970919710}
+  xIcon: {fileID: 5296520409794779526}
 --- !u!1 &4434118354781213900
 GameObject:
   m_ObjectHideFlags: 0
@@ -2666,6 +2711,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3541249214494300164}
   - component: {fileID: 384936032130178135}
+  - component: {fileID: 1377007255017265975}
   m_Layer: 5
   m_Name: UpgSniper
   m_TagString: Untagged
@@ -2751,6 +2797,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1377007255017265975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5591338086602958653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b585861e29b829641bc502f11bc313c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plusIcon: {fileID: 5608395247479929596}
+  xIcon: {fileID: 3560741197031424185}
 --- !u!1 &5608395247479929596
 GameObject:
   m_ObjectHideFlags: 0
@@ -3686,6 +3746,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4636108000207613096}
   - component: {fileID: 2619002559527606628}
+  - component: {fileID: 2870818590708681795}
   m_Layer: 5
   m_Name: UpgShotgun
   m_TagString: Untagged
@@ -3771,6 +3832,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2870818590708681795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6431183451070493635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b585861e29b829641bc502f11bc313c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plusIcon: {fileID: 6282074066481398114}
+  xIcon: {fileID: 7164997800500171709}
 --- !u!1 &6472896861246885156
 GameObject:
   m_ObjectHideFlags: 0
@@ -3781,6 +3856,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5566791442836369544}
   - component: {fileID: 1728095369542698482}
+  - component: {fileID: 6400048215233519176}
   m_Layer: 5
   m_Name: UpgFlesh
   m_TagString: Untagged
@@ -3866,6 +3942,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6400048215233519176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6472896861246885156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b585861e29b829641bc502f11bc313c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plusIcon: {fileID: 7088746135889750112}
+  xIcon: {fileID: 699245924363968}
 --- !u!1 &6501989304880302582
 GameObject:
   m_ObjectHideFlags: 0
@@ -4683,7 +4773,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerUI: {fileID: 0}
   towerUpgrades:
-  - costLevels: 64000000fa00000020a10700
+  - costLevels: 010000000200000003000000
     healthLevels: 000000000000000000000000
     damageLevels: 000000000000000000000000
     attackSpeedLevels:

@@ -32,6 +32,11 @@ public class UniversalUpgradeSys : MonoBehaviour
             Debug.LogError("Invalid tower index!");
             return;
         }
+        if(!CanUpgradeFurther(towerIndex))
+        {
+            Debug.Log("Can't upgrade further!");
+            return;
+        }
 
         GameObject towerPrefab = towerUI.towerPrefabs[towerIndex];
 
@@ -65,7 +70,7 @@ public class UniversalUpgradeSys : MonoBehaviour
         towerAttack.UpgradeAttackSpeed(attackSpeed);
         towerAttack.UpgradeRange(range);
         currencyManager.SubtractCurrency(cost);
-        Debug.Log("Upgraded " + towerPrefab.name + " to level " + upgrade.level);
+        Debug.Log("Upgraded " + towerPrefab.name + " to level " + (upgrade.level+1));
 
         // Upgrade all instances of the tower in the scene
         GameObject[] activeTowers = GameObject.FindGameObjectsWithTag("Tower");
@@ -106,6 +111,14 @@ public class UniversalUpgradeSys : MonoBehaviour
     {
         int currCost = towerUpgrades[towerIndex].costLevels[towerUpgrades[towerIndex].level];
         return currCost;
+    }
+    public bool CanUpgradeFurther(int towerIndex)
+    {
+        if(towerUpgrades[towerIndex].level + 1 >= towerUpgrades[towerIndex].costLevels.Count)
+        {
+            return false;
+        }
+        return true;
     }
 }
 

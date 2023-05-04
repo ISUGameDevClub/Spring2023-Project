@@ -187,6 +187,7 @@ public class WaveController : MonoBehaviour
         {
             // In this case, the last wave has finished. // Temporary measure for the GameShowcaseDemo.
             FindObjectOfType<TransitionController>().FadeToLevel(winScene);
+            FindObjectOfType<AudioManager>().Play("VictoryTheme");
         }
     }
 

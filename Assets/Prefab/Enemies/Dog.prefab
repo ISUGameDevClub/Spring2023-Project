@@ -357,7 +357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 913fe4ffa119b0c438374304292df4c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currencyDropAmount: 50
+  currencyDropAmount: 25
   seedDropAmount: 0
   currencyDropProbability: 1
   seedDropProbability: 0

@@ -44643,10 +44643,8 @@ MonoBehaviour:
   westSpawn: {fileID: 1909026238}
   northWestSpawn: {fileID: 529278004}
   waves:
-  - {fileID: 11400000, guid: f7be3a798809b3e4190b49dbbb89006e, type: 2}
-  - {fileID: 11400000, guid: f7be3a798809b3e4190b49dbbb89006e, type: 2}
+  - {fileID: 11400000, guid: 5f52928c184fd914894e3d4d77be9596, type: 2}
   setupTimes:
-  - 5
   - 5
 --- !u!4 &2145647314
 Transform:

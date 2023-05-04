@@ -617,9 +617,13 @@ MonoBehaviour:
   westSpawn: {fileID: 1293039505}
   northWestSpawn: {fileID: 1181048170}
   waves:
-  - {fileID: 11400000, guid: 12c93071154900741ba71547c4488141, type: 2}
-  - {fileID: 11400000, guid: fbc6069af45676448a773fc1ee8c5fd2, type: 2}
+  - {fileID: 11400000, guid: 5f52928c184fd914894e3d4d77be9596, type: 2}
+  - {fileID: 11400000, guid: 45fc82264166d6445b474eaf11f72044, type: 2}
+  - {fileID: 11400000, guid: b32e0c5f8e4cf9b419d5a3047a716e06, type: 2}
+  - {fileID: 11400000, guid: 0fa885777bc5d55479fbf55628089e50, type: 2}
   setupTimes:
+  - 5
+  - 5
   - 5
   - 5
 --- !u!1001 &1032517508
@@ -831,7 +835,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5692087244900581021, guid: 73fb226742262fa4bbdb4131442fa9b4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6683557510255753262, guid: 73fb226742262fa4bbdb4131442fa9b4, type: 3}
       propertyPath: m_AnchorMax.y

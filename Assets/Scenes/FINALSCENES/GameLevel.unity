@@ -607,7 +607,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHolder: {fileID: 170451131}
-  winScene: FinalVictory
+  winScene: Credits
   northSpawn: {fileID: 1610316823}
   northEastSpawn: {fileID: 206433955}
   eastSpawn: {fileID: 1585914253}

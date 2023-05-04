@@ -8,6 +8,7 @@ public class AudioManager : MonoBehaviour
     float masterListenerVolume;
     public List<AudioManagerSound> readySounds;
     public List<AudioManagerSound> soundBank;
+    [SerializeField] AudioMixerGroup aMix;
 
     public string firstSongName;
 
@@ -44,10 +45,8 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-
         masterListenerVolume = 1f;
         fadeTimeRemaining = new List<float>();
-
         // Start by playing first sound, written in editor
         Play(firstSongName);
     }
@@ -72,6 +71,7 @@ public class AudioManager : MonoBehaviour
             {
                 // Make a new AMS that clones the selected one from the soundBank
                 AudioManagerSound newS = new AudioManagerSound (s.name, s.clip, s.volume, s.pitch, s.loop, gameObject.AddComponent<AudioSource>());
+                newS.source.outputAudioMixerGroup = aMix;
                 newS.source.volume = 0f; // initial volume to 0
                 readySounds.Insert(0, newS); // newest sound gets priority
                 readySounds[0].source.Play();

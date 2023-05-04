@@ -106,5 +106,6 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  aMix: {fileID: 24300002, guid: 58e0f61b0395b3748bdcf30c7997707b, type: 2}
   firstSongName: MainMenu
   fadeTime: 2

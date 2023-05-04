@@ -4915,53 +4915,53 @@ MonoBehaviour:
   shopActive: 0
   towerUI: {fileID: 0}
   towerUpgrades:
-  - costLevels: 010000000200000003000000
-    healthLevels: 960000000000000000000000
-    damageLevels: 000000000000000000000000
+  - costLevels: f4010000e8030000dc050000
+    healthLevels: c8000000fa0000002c010000
+    damageLevels: 410000004b00000055000000
     attackSpeedLevels:
-    - 0
-    - 0
-    - 0
-    rangeLevels: 000000000000000000000000
+    - 0.85
+    - 0.7
+    - 0.6
+    rangeLevels: 0a0000000c0000000f000000
     level: 0
-  - costLevels: 64000000fa00000020a10700
-    healthLevels: 000000000000000000000000
-    damageLevels: 000000000000000000000000
+  - costLevels: ee020000dc050000d0070000
+    healthLevels: fa0000002c0100005e010000
+    damageLevels: 500000005a00000064000000
     attackSpeedLevels:
-    - 0
-    - 0
-    - 0
-    rangeLevels: 000000000000000000000000
+    - 1.25
+    - 1
+    - 0.85
+    rangeLevels: 060000000700000007000000
     level: 0
-  - costLevels: 64000000fa00000020a10700
-    healthLevels: 000000000000000000000000
-    damageLevels: 000000000000000000000000
+  - costLevels: e8030000dc050000c4090000
+    healthLevels: 500000005a0000007d000000
+    damageLevels: 500000005f0000006e000000
     attackSpeedLevels:
-    - 0
-    - 0
-    - 0
-    rangeLevels: 000000000000000000000000
+    - 2
+    - 1.5
+    - 1.25
+    rangeLevels: 140000001900000023000000
     level: 0
-  - costLevels: 64000000fa00000020a10700
-    healthLevels: 000000000000000000000000
-    damageLevels: 000000000000000000000000
+  - costLevels: 58020000b004000008070000
+    healthLevels: c8000000fa0000002c010000
+    damageLevels: 190000001e00000025000000
     attackSpeedLevels:
-    - 0
-    - 0
-    - 0
-    rangeLevels: 000000000000000000000000
+    - 1.85
+    - 1.7
+    - 1.6
+    rangeLevels: 090000000a0000000b000000
     level: 0
-  - costLevels: 64000000fa00000020a10700
-    healthLevels: 000000000000000000000000
-    damageLevels: 000000000000000000000000
+  - costLevels: 46050000d6060000c4090000
+    healthLevels: fa000000130100004a010000
+    damageLevels: 0a0000000f00000017000000
     attackSpeedLevels:
-    - 0
-    - 0
-    - 0
-    rangeLevels: 000000000000000000000000
+    - 0.8
+    - 0.75
+    - 0.65
+    rangeLevels: 080000000900000009000000
     level: 0
-  - costLevels: 64000000fa00000020a10700
-    healthLevels: 000000000000000000000000
+  - costLevels: f4010000e8030000dc050000
+    healthLevels: f4010000ee020000e8030000
     damageLevels: 000000000000000000000000
     attackSpeedLevels:
     - 0

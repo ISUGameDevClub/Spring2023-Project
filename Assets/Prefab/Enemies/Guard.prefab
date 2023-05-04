@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3285060416360313904}
   - component: {fileID: 841359305746705392}
   - component: {fileID: 4965704058490381996}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: detectRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 6965518560704433467}
   - component: {fileID: 379469859235975017}
   - component: {fileID: 5494201378814268319}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: attackRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 1148156745804273887}
   - component: {fileID: 4743498433339952066}
   - component: {fileID: 1212094476904823908}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 4855375040428101046}
   - component: {fileID: -8241883696069654655}
   - component: {fileID: 4467673036328511996}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Guard
   m_TagString: Enemy/Ground
   m_Icon: {fileID: 0}

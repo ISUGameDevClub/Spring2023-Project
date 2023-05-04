@@ -20,8 +20,8 @@ TagManager:
   - Player/Self
   - Player/Projectile
   - Ranges
-  - 
-  - 
+  - PlayerBoundary
+  - Enemy
   - 
   - 
   - 

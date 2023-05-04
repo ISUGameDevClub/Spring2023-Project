@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3280025335938870789}
   - component: {fileID: 5218165913806515287}
   - component: {fileID: 77072022335189153}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: attackRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 557870083891191432}
   - component: {fileID: 1105293683176428314}
   - component: {fileID: 1209483891182358653}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 1031115734643945096}
   - component: {fileID: 274455662843526991}
   - component: {fileID: 8372789862932967601}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GlassEnemy
   m_TagString: Enemy/Ground
   m_Icon: {fileID: 0}
@@ -331,7 +331,7 @@ GameObject:
   - component: {fileID: 6969428832006510350}
   - component: {fileID: 5081072236493211854}
   - component: {fileID: 704595757966001554}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: detectRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}

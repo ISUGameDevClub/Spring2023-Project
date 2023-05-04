@@ -16,10 +16,11 @@ public class PlayerAnimsHelper : MonoBehaviour
         
     }
 
-    public void ResetToWave()
+    public void LoseScreen()
     {
         //this needs to be a reset to the last completed wave!!!
-        FindObjectOfType<TransitionController>().ResetCurrentScene();
+        FindObjectOfType<TransitionController>().FadeToLevel("LoseScreen");
+        FindObjectOfType<AudioManager>().Play("DeathTheme");
     }
 
     //public void HaltPlayerActions()

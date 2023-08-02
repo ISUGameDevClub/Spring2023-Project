@@ -12,6 +12,10 @@ public class WaveMusicController : MonoBehaviour
     {
         waveController = FindObjectOfType<WaveController>();
         audioManager = FindObjectOfType<AudioManager>();
+        if(audioManager is null)
+        {
+            Debug.LogWarning("AudioManager not found in the scene");
+        }
     }
 
     // Update is called once per frame
@@ -21,44 +25,44 @@ public class WaveMusicController : MonoBehaviour
         {
             if(waveController.isSetupPhase())
             {
-                audioManager.Play("Setup1");
+                audioManager?.Play("Setup1");
             }
             else
             {
-                audioManager.Play("Attack1");
+                audioManager?.Play("Attack1");
             }
         }
         if (waveController.WaveNumber == 1)
         {
             if (waveController.isSetupPhase())
             {
-                audioManager.Play("Setup2");
+                audioManager?.Play("Setup2");
             }
             else
             {
-                audioManager.Play("Attack2");
+                audioManager?.Play("Attack2");
             }
         }
         if (waveController.WaveNumber == 2)
         {
             if (waveController.isSetupPhase())
             {
-                audioManager.Play("Setup3");
+                audioManager?.Play("Setup3");
             }
             else
             {
-                audioManager.Play("Attack3");
+                audioManager?.Play("Attack3");
             }
         }
         if (waveController.WaveNumber == 4)
         {
             if (waveController.isSetupPhase())
             {
-                audioManager.Play("Setup3");
+                audioManager?.Play("Setup3");
             }
             else
             {
-                audioManager.Play("FinalAttack");
+                audioManager?.Play("FinalAttack");
             }
         }
     }

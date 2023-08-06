@@ -17,7 +17,7 @@ public class EnemyHealth : MonoBehaviour
 
             if (gameObject.name.Length >= 4 && gameObject.name.Substring(0, 5).Equals("Guard"))
             {
-                Instantiate(guardEnemyDogPrefab, transform.position, transform.rotation, null);
+                Instantiate(guardEnemyDogPrefab, transform.position, transform.rotation, WaveController.instance.enemyHolder);
             }
             GetComponentInParent<Animator>().SetTrigger("death");
             GetComponent<EnemyMovement>().enabled = false;

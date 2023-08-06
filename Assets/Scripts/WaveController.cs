@@ -176,8 +176,6 @@ public class WaveController : MonoBehaviour
     {
         // When the last wave has ended, which is when all enemies have died, begin the next wave.
         // This could potentially/should be changed in the future, I'm checking if all enemies are dead by counting the children of an enemyHolder transform.
-        // This method could cause issues with the dog enemy. If the dog enemy is the last one to die, then theoretically, it could start the next wave before spawning
-        // the dogs.
         if (enemyHolder.childCount == 0 && enemiesSpawned && !finalWaveSpawned)
         {
             enemiesSpawned = false;
@@ -187,7 +185,7 @@ public class WaveController : MonoBehaviour
         {
             // In this case, the last wave has finished. // Temporary measure for the GameShowcaseDemo.
             FindObjectOfType<TransitionController>().FadeToLevel(winScene);
-            FindObjectOfType<AudioManager>().Play("VictoryTheme");
+            FindObjectOfType<AudioManager>()?.Play("VictoryTheme");
         }
     }
 

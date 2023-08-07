@@ -6,12 +6,15 @@ public class EnemyHealth : MonoBehaviour
 {
     public GameObject guardEnemyDogPrefab;
     [SerializeField] int health;
+    private bool dying;
 
     public void loseHealth(int damage)
     {
+        if (dying) return;
         health = health - damage;
         if (health <= 0)
         {
+            dying = true;
             EnemyDropScript dropScript = this.GetComponent<EnemyDropScript>();
             if (dropScript != null) dropScript.dropItems();
 
@@ -19,9 +22,10 @@ public class EnemyHealth : MonoBehaviour
             {
                 Instantiate(guardEnemyDogPrefab, transform.position, transform.rotation, WaveController.instance.enemyHolder);
             }
-            GetComponentInParent<Animator>().SetTrigger("death");
-            GetComponent<EnemyMovement>().enabled = false;
+            GetComponent<Rigidbody2D>().simulated = false;
             GetComponent<EnemyMeleeAttackManager>().enabled = false;
+            GetComponent<EnemyMovement>().enabled = false;
+            GetComponentInParent<Animator>().SetTrigger("death");
         }
     }
 

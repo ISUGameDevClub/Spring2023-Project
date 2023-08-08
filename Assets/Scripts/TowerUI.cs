@@ -82,9 +82,9 @@ public class TowerUI : MonoBehaviour
         {
             towerSelector = 4;
         }
-        /*if (Input.GetKeyDown(KeyCode.Alpha6))
+        if (Input.GetKeyDown(KeyCode.Alpha6))
         {
             towerSelector = 5;
-        }*/
+        }
     }
 }

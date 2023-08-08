@@ -56,10 +56,7 @@ TagManager:
   - name: Enemy/Effects
     uniqueID: 4269171375
     locked: 0
-  - name: Player/Self
-    uniqueID: 2006192533
-    locked: 0
-  - name: Tower/Self
+  - name: Tower_Player_Enemy/Self
     uniqueID: 1203923665
     locked: 0
   - name: Enemy/Self

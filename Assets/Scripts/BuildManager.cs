@@ -52,7 +52,7 @@ public class BuildManager : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && currentState != null && currentState.state == 1 && currentCondition == 0 && !FindObjectOfType<UniversalUpgradeSys>().shopActive)
+        if (Input.GetMouseButtonDown(0) && currentState != null && currentState.state == 1 && currentCondition == 0)
         {
             GameObject towerToBuild = towerUI.getHoveredTower();
             // Right now, the build manager is only used to build towers that cost currency, but maybe it will be extended to build plants that cost seeds as well.

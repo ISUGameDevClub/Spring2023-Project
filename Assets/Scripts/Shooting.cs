@@ -29,7 +29,7 @@ public class Shooting : MonoBehaviour
     void Update()
     {
         if (Input.GetButton("Fire1") && canFire && gameManager.GetComponent<StateController>().state == 0 && !playerAnims.GetBool("death")
-            && !FindObjectOfType<UniversalUpgradeSys>().shopActive)
+            && !UITowerPrevention.MouseOnUI)
         {
             Shoot();
             canFire = false;

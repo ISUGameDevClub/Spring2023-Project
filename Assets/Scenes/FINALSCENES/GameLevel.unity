@@ -854,10 +854,6 @@ PrefabInstance:
       propertyPath: m_margin.z
       value: -0.011604292
       objectReference: {fileID: 0}
-    - target: {fileID: 376495660786983952, guid: 73fb226742262fa4bbdb4131442fa9b4, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 376495662518864623, guid: 73fb226742262fa4bbdb4131442fa9b4, type: 3}
       propertyPath: m_Name
       value: UI Canvas
@@ -1217,6 +1213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c59f64635110f84da5edcc22c72a340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseOnThis: 0
 --- !u!114 &1032517512
 MonoBehaviour:
   m_ObjectHideFlags: 0

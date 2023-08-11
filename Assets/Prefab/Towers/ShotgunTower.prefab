@@ -47,7 +47,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 6
+  m_Radius: 5
 --- !u!1 &5840964408827577268
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,8 +147,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 946fe516742bd8d428f5586916b31694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 250
-  totalHealth: 250
+  currentHealth: 200
+  totalHealth: 200
 --- !u!114 &5077729786145225099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,10 +175,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d1d33d1e351b8a4cad5df3a73403c02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerAttackSpeed: 1.25
+  towerAttackSpeed: 1.5
   projectilePrefab: {fileID: 6434496924394768136, guid: 0831603921a23c54786f54b69427d744, type: 3}
   chainProjectilePrefab: {fileID: 0}
-  attackDamage: 80
+  attackDamage: 70
   towerType: 3
 --- !u!114 &8975797925218310313
 MonoBehaviour:

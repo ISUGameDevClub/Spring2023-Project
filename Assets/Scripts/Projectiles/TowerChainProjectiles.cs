@@ -38,18 +38,16 @@ public class TowerChainProjectiles : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<EnemyHealth>())
+        // The lockTarget condition enforces that the projectile only affects its target.
+        // If removed, it could instead affect the first enemy blocking the path between the target.
+        if (collision.GetComponent<EnemyHealth>() && collision.gameObject == lockTarget)
         {
             Instantiate(bloodSplatter, collision.transform.position, collision.transform.rotation, null);
-            // Set the bullet to the center of the hit object to make it the firing origin.
             transform.position = collision.transform.position;
-            // This If statment checks to make sure that the target is the one that loses health and not other objects in the line of fire.
-            // Can be removed if the desired function is to also hit enemys in the path.
-            if (collision.gameObject == lockTarget)
-            {
-                collision.GetComponent<EnemyHealth>().loseHealth(attackDamage);
-                fireChain.Add(collision.gameObject);
-            }
+            fireChain.Add(collision.gameObject);
+            collision.GetComponent<EnemyHealth>().loseHealth(attackDamage);
+            
+        
             //Checks for other enemys in range to fire at.
             if (dontChainToSameEnemys)
             {
@@ -62,8 +60,6 @@ public class TowerChainProjectiles : MonoBehaviour
                 else
                 {
                     currentBounce++;
-                    // add object to array for the function to stop same targeting.
-                    fireChain.Add(newTarget);
                     lockTarget = newTarget;
                 }
             }
@@ -78,8 +74,6 @@ public class TowerChainProjectiles : MonoBehaviour
                 else
                 {
                     currentBounce++;
-                    // add object to array for the function to stop same targeting.
-                    fireChain.Add(newTarget);
                     lockTarget = newTarget;
                 }
             }

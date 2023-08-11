@@ -50,7 +50,7 @@ public class TowerAttack : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Checks if collider already exist inside of the array.
-        if (!other.gameObject.GetComponent<MeleeAttack>() && !other.gameObject.GetComponent<TowerProjectile>() && !collidersInside.Contains(other))
+        if (other.GetComponent<EnemyHealth>() && !collidersInside.Contains(other))
         {
             collidersInside.Add(other);
         }
@@ -74,7 +74,7 @@ public class TowerAttack : MonoBehaviour
                 towerAnims.SetTrigger("attack");
             }
             GameObject projectile;
-            // Gets the first object with the tag of Tower, no matter what postion it is from the array.
+            // Gets the first object with the tag of Enemy/Ground, no matter what postion it is from the array.
             Vector3 vectorToTarget = target[target.IndexOf(target.Where(x => x.tag == "Enemy/Ground").FirstOrDefault())].transform.position - transform.position;
             // Gets the angle of the target from the fireing origin.
             float targetAngle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;

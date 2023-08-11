@@ -10,7 +10,7 @@ public class TowerChainDetect : MonoBehaviour
     {
         // Checks if collider already exist inside of the array.
         // NOTE: Bullet bug may affect this if statment. 
-        if (!other.gameObject.GetComponent<TowerProjectile>() && !collidersInside.Contains(other))
+        if (other.gameObject.GetComponent<EnemyHealth>() && !collidersInside.Contains(other))
         {
             collidersInside.Add(other);
         }

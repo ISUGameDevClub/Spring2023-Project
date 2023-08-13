@@ -7,7 +7,7 @@ public class WaveController : MonoBehaviour
 {
     public static WaveController instance;
 
-    public int WaveNumber { get; private set; } = 0;
+    public int WaveNumber { get; private set; } = -1;
     private bool enemiesSpawned = false;
     private phaseType currentPhaseType;
     public Transform enemyHolder;
@@ -92,12 +92,12 @@ public class WaveController : MonoBehaviour
     {
         enemiesSpawnedInGroup = 0;
         currentSetupTimeElapsed = 0;
-        yield return StartCoroutine(CompleteSetupPhase(WaveNumber));
-        yield return StartCoroutine(BeginActivePhase(WaveNumber));
         // Quick fix to avoid index out of bounds error
         if(WaveNumber < waves.Length - 1)
         {
             WaveNumber++;
+            yield return StartCoroutine(CompleteSetupPhase(WaveNumber));
+            yield return StartCoroutine(BeginActivePhase(WaveNumber));
         }
         else
         {

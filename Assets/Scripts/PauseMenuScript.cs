@@ -23,7 +23,7 @@ public class PauseMenuScript : MonoBehaviour
         //Change P to Esc for release
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            GameObject.Find("SoundController").GetComponent<Sound>().SpawnSound("MenuSelect");
+            // GameObject.Find("SoundController").GetComponent<Sound>().SpawnSound("MenuSelect");
             if (IsGamePaused)
             {
                 Resume();

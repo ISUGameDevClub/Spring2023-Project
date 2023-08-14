@@ -57,12 +57,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5840964408827577279}
-  - component: {fileID: 5840964408827577273}
-  - component: {fileID: 5840964408827577274}
   - component: {fileID: 5840964408827577275}
-  - component: {fileID: 5077729786145225099}
-  - component: {fileID: 4191044017003006286}
   - component: {fileID: 8975797925218310313}
+  - component: {fileID: 4191044017003006286}
+  - component: {fileID: 5077729786145225099}
+  - component: {fileID: 5840964408827577274}
+  - component: {fileID: 5840964408827577273}
   m_Layer: 0
   m_Name: ShotgunTower
   m_TagString: Tower
@@ -88,27 +88,65 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &5840964408827577273
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!114 &5840964408827577275
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5840964408827577268}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 946fe516742bd8d428f5586916b31694, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 200
+  totalHealth: 200
+--- !u!114 &8975797925218310313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5840964408827577268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f4c46766db618d48aa7260ac5cbbd73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  costInfo: {fileID: 11400000, guid: f3583c0e63d8fe8499b1502abe8b3b27, type: 2}
+  currencyRefundPercentage: 0.5
+--- !u!114 &4191044017003006286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5840964408827577268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1d33d1e351b8a4cad5df3a73403c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerAttackSpeed: 1.5
+  projectilePrefab: {fileID: 6434496924394768136, guid: 0831603921a23c54786f54b69427d744, type: 3}
+  chainProjectilePrefab: {fileID: 0}
+  attackDamage: 70
+  towerType: 3
+--- !u!114 &5077729786145225099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5840964408827577268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46b1b425512d2e7419f7f7fa86160b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 0, g: 0.16181755, b: 1, a: 0}
+  condition: 0
 --- !u!61 &5840964408827577274
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -135,65 +173,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &5840964408827577275
-MonoBehaviour:
+--- !u!50 &5840964408827577273
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5840964408827577268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 946fe516742bd8d428f5586916b31694, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHealth: 200
-  totalHealth: 200
---- !u!114 &5077729786145225099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5840964408827577268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46b1b425512d2e7419f7f7fa86160b65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hoverColor: {r: 0, g: 0.16181755, b: 1, a: 0}
-  condition: 0
---- !u!114 &4191044017003006286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5840964408827577268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d1d33d1e351b8a4cad5df3a73403c02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  towerAttackSpeed: 1.5
-  projectilePrefab: {fileID: 6434496924394768136, guid: 0831603921a23c54786f54b69427d744, type: 3}
-  chainProjectilePrefab: {fileID: 0}
-  attackDamage: 70
-  towerType: 3
---- !u!114 &8975797925218310313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5840964408827577268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f4c46766db618d48aa7260ac5cbbd73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  costInfo: {fileID: 11400000, guid: f3583c0e63d8fe8499b1502abe8b3b27, type: 2}
-  currencyRefundPercentage: 0.5
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &7996717931755875119
 GameObject:
   m_ObjectHideFlags: 0

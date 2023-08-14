@@ -167,12 +167,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5799157937352638563}
-  - component: {fileID: 3086904290279603854}
   - component: {fileID: 1574034960842526167}
+  - component: {fileID: 105811606505231003}
+  - component: {fileID: 3086904290279603854}
+  - component: {fileID: 7194183581397412412}
   - component: {fileID: 5799157937352638560}
   - component: {fileID: 1844326897981557136}
-  - component: {fileID: 7194183581397412412}
-  - component: {fileID: 105811606505231003}
   - component: {fileID: 4170941138209625208}
   m_Layer: 10
   m_Name: Soldier
@@ -199,6 +199,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1574034960842526167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5799157937352638564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b05b2448632da9648adb9a850207c8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guardEnemyDogPrefab: {fileID: 0}
+  health: 250
+--- !u!114 &105811606505231003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5799157937352638564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 913fe4ffa119b0c438374304292df4c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currencyDropAmount: 45
+  seedDropAmount: 0
+  currencyDropProbability: 1
+  seedDropProbability: 0
 --- !u!114 &3086904290279603854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,7 +244,7 @@ MonoBehaviour:
   enemyAttackSpeed: 1
   projectilePrefab: {fileID: 246787300294633112, guid: 7cea57c9221904e4e9dcda6a67862d57, type: 3}
   attackDamage: 13
---- !u!114 &1574034960842526167
+--- !u!114 &7194183581397412412
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -223,11 +253,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 5799157937352638564}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b05b2448632da9648adb9a850207c8bc, type: 3}
+  m_Script: {fileID: 11500000, guid: 1bd559ca735aea44ba42fd95dfb1080d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guardEnemyDogPrefab: {fileID: 0}
-  health: 250
+  enemyAnims: {fileID: 0}
+  speed: 1.5
+  towerDetectObject: {fileID: 953555689669302262}
+  bufferDistance: 1.2
+  maxPlayerFollowRange: 4
+  playerIgnoreCooldown: 2
 --- !u!50 &5799157937352638560
 Rigidbody2D:
   serializedVersion: 4
@@ -265,40 +299,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &7194183581397412412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5799157937352638564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bd559ca735aea44ba42fd95dfb1080d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyAnims: {fileID: 0}
-  speed: 1.5
-  towerDetectObject: {fileID: 953555689669302262}
-  bufferDistance: 1.2
-  maxPlayerFollowRange: 4
-  playerIgnoreCooldown: 2
---- !u!114 &105811606505231003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5799157937352638564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 913fe4ffa119b0c438374304292df4c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currencyDropAmount: 45
-  seedDropAmount: 0
-  currencyDropProbability: 1
-  seedDropProbability: 0
 --- !u!95 &4170941138209625208
 Animator:
   serializedVersion: 5

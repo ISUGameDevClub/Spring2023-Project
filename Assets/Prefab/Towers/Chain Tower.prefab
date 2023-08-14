@@ -139,12 +139,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2511340583881408494}
+  - component: {fileID: 2511340583881408490}
+  - component: {fileID: 1506972406701256892}
+  - component: {fileID: 5331347776207222047}
+  - component: {fileID: 3864911516830582234}
   - component: {fileID: 2511340583881408488}
   - component: {fileID: 2511340583881408491}
-  - component: {fileID: 2511340583881408490}
-  - component: {fileID: 3864911516830582234}
-  - component: {fileID: 5331347776207222047}
-  - component: {fileID: 1506972406701256892}
   m_Layer: 0
   m_Name: Chain Tower
   m_TagString: Tower
@@ -170,6 +170,65 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2511340583881408490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2511340583881408485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 946fe516742bd8d428f5586916b31694, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 200
+  totalHealth: 200
+--- !u!114 &1506972406701256892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2511340583881408485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f4c46766db618d48aa7260ac5cbbd73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  costInfo: {fileID: 11400000, guid: 9f9c03b86677a7a46a998f48763ad72a, type: 2}
+  currencyRefundPercentage: 0.5
+--- !u!114 &5331347776207222047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2511340583881408485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1d33d1e351b8a4cad5df3a73403c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerAttackSpeed: 2
+  projectilePrefab: {fileID: 1868895473673010215, guid: 4f6d4ba7dea0c6241a83486f1251c3a2, type: 3}
+  chainProjectilePrefab: {fileID: 1228929761512374194, guid: 67864ac53653456448dd6e5957e6887b, type: 3}
+  attackDamage: 25
+  towerType: 1
+--- !u!114 &3864911516830582234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2511340583881408485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46b1b425512d2e7419f7f7fa86160b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 0, g: 0.16181755, b: 1, a: 0}
+  condition: 0
 --- !u!50 &2511340583881408488
 Rigidbody2D:
   serializedVersion: 4
@@ -217,65 +276,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2511340583881408490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2511340583881408485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 946fe516742bd8d428f5586916b31694, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHealth: 200
-  totalHealth: 200
---- !u!114 &3864911516830582234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2511340583881408485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46b1b425512d2e7419f7f7fa86160b65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hoverColor: {r: 0, g: 0.16181755, b: 1, a: 0}
-  condition: 0
---- !u!114 &5331347776207222047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2511340583881408485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d1d33d1e351b8a4cad5df3a73403c02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  towerAttackSpeed: 2
-  projectilePrefab: {fileID: 1868895473673010215, guid: 4f6d4ba7dea0c6241a83486f1251c3a2, type: 3}
-  chainProjectilePrefab: {fileID: 1228929761512374194, guid: 67864ac53653456448dd6e5957e6887b, type: 3}
-  attackDamage: 25
-  towerType: 1
---- !u!114 &1506972406701256892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2511340583881408485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f4c46766db618d48aa7260ac5cbbd73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  costInfo: {fileID: 11400000, guid: 9f9c03b86677a7a46a998f48763ad72a, type: 2}
-  currencyRefundPercentage: 0.5
 --- !u!1 &3891755664520359385
 GameObject:
   m_ObjectHideFlags: 0

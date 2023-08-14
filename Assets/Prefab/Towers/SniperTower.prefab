@@ -104,7 +104,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1203923665
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.23529413, g: 0.23529413, b: 0.23529413, a: 1}
@@ -238,7 +238,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1203923665
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: -610820424, guid: fd21a2bf10bab31439a9fbe9dee33324, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -260,7 +260,7 @@ SortingGroup:
   m_GameObject: {fileID: 4873837189077048491}
   m_Enabled: 1
   m_SortingLayerID: 1203923665
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 1
 --- !u!1 &4968962551966464908
 GameObject:
@@ -271,12 +271,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4968962551966464903}
-  - component: {fileID: 4968962551966464897}
   - component: {fileID: 4968962551966464899}
-  - component: {fileID: 6020665527287464371}
-  - component: {fileID: 3446273407124926838}
-  - component: {fileID: 7815940876562680098}
   - component: {fileID: -6516730082209138345}
+  - component: {fileID: 3446273407124926838}
+  - component: {fileID: 6020665527287464371}
+  - component: {fileID: 4968962551966464897}
+  - component: {fileID: 7815940876562680098}
   m_Layer: 0
   m_Name: SniperTower
   m_TagString: Tower
@@ -302,6 +302,65 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4968962551966464899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4968962551966464908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 946fe516742bd8d428f5586916b31694, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 70
+  totalHealth: 70
+--- !u!114 &-6516730082209138345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4968962551966464908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f4c46766db618d48aa7260ac5cbbd73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  costInfo: {fileID: 11400000, guid: babb6e7921106c146a23ba71c29e33e1, type: 2}
+  currencyRefundPercentage: 0.5
+--- !u!114 &3446273407124926838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4968962551966464908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1d33d1e351b8a4cad5df3a73403c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerAttackSpeed: 2
+  projectilePrefab: {fileID: 6743266026246061844, guid: 9acb59d74b08aad4d82da1548869d7f0, type: 3}
+  chainProjectilePrefab: {fileID: 0}
+  attackDamage: 70
+  towerType: 2
+--- !u!114 &6020665527287464371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4968962551966464908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46b1b425512d2e7419f7f7fa86160b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 0, g: 0.16181755, b: 1, a: 0}
+  condition: 0
 --- !u!50 &4968962551966464897
 Rigidbody2D:
   serializedVersion: 4
@@ -323,51 +382,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!114 &4968962551966464899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4968962551966464908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 946fe516742bd8d428f5586916b31694, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHealth: 70
-  totalHealth: 70
---- !u!114 &6020665527287464371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4968962551966464908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46b1b425512d2e7419f7f7fa86160b65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hoverColor: {r: 0, g: 0.16181755, b: 1, a: 0}
-  condition: 0
---- !u!114 &3446273407124926838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4968962551966464908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d1d33d1e351b8a4cad5df3a73403c02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  towerAttackSpeed: 2
-  projectilePrefab: {fileID: 6743266026246061844, guid: 9acb59d74b08aad4d82da1548869d7f0, type: 3}
-  chainProjectilePrefab: {fileID: 0}
-  attackDamage: 70
-  towerType: 2
 --- !u!70 &7815940876562680098
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -384,20 +398,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.36}
   m_Size: {x: 1.75, y: 3.17}
   m_Direction: 0
---- !u!114 &-6516730082209138345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4968962551966464908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f4c46766db618d48aa7260ac5cbbd73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  costInfo: {fileID: 11400000, guid: babb6e7921106c146a23ba71c29e33e1, type: 2}
-  currencyRefundPercentage: 0.5
 --- !u!1 &6913781355788019973
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,7 +470,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1203923665
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 35d85b2e4ea94e64388c3a81d903e781, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
@@ -567,7 +567,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1203923665
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 109804173, guid: 7554c8bb835af91449ed3a36f7b44361, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

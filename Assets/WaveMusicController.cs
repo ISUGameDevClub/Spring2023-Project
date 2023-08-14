@@ -1,69 +1,69 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class WaveMusicController : MonoBehaviour
 {
-    private WaveController waveController;
-    private AudioManager audioManager;
+    private void OnEnable()
+    {
+        //Debug.Log("WaveMusic OnEnable");
+        WaveController.instance.onNewSetupStart += playNextSetupSong;
+        WaveController.instance.onNewAttackStart += playNextAttackSong;
+    }
+
+    private void OnDisable()
+    {
+        //Debug.Log("WaveMusic OnDisable");
+        WaveController.instance.onNewSetupStart -= playNextSetupSong;
+        WaveController.instance.onNewAttackStart -= playNextAttackSong;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        waveController = FindObjectOfType<WaveController>();
-        audioManager = FindObjectOfType<AudioManager>();
-        if(audioManager is null)
+        if(AudioManager.instance is null)
         {
             Debug.LogWarning("AudioManager not found in the scene");
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void playNextSetupSong(object sender, EventArgs e)
     {
-        if(waveController.WaveNumber == 0)
+        switch (WaveController.instance.WaveNumber)
         {
-            if(waveController.isSetupPhase())
-            {
-                audioManager?.Play("Setup1");
-            }
-            else
-            {
-                audioManager?.Play("Attack1");
-            }
-        }
-        if (waveController.WaveNumber == 1)
-        {
-            if (waveController.isSetupPhase())
-            {
-                audioManager?.Play("Setup2");
-            }
-            else
-            {
-                audioManager?.Play("Attack2");
-            }
-        }
-        if (waveController.WaveNumber == 2)
-        {
-            if (waveController.isSetupPhase())
-            {
-                audioManager?.Play("Setup3");
-            }
-            else
-            {
-                audioManager?.Play("Attack3");
-            }
-        }
-        if (waveController.WaveNumber == 4)
-        {
-            if (waveController.isSetupPhase())
-            {
-                audioManager?.Play("Setup3");
-            }
-            else
-            {
-                audioManager?.Play("FinalAttack");
-            }
+            case 0:
+                AudioManager.instance?.Play("Setup1");
+                break;
+            case 1:
+                AudioManager.instance?.Play("Setup2");
+                break;
+            case 2:
+                AudioManager.instance?.Play("Setup3");
+                break;
+            case 3:
+                AudioManager.instance?.Play("Setup3");
+                break;
         }
     }
+
+    public void playNextAttackSong(object sender, EventArgs e)
+    {
+        switch (WaveController.instance.WaveNumber)
+        {
+            case 0:
+                AudioManager.instance?.Play("Attack1");
+                break;
+            case 1:
+                AudioManager.instance?.Play("Attack2");
+                break;
+            case 2:
+                AudioManager.instance?.Play("Attack3");
+                break;
+            case 3:
+                AudioManager.instance?.Play("FinalAttack");
+                break;
+        }
+    }
+
 }

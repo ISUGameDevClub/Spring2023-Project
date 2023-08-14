@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,8 @@ public class WaveController : MonoBehaviour
     public static WaveController instance;
 
     public int WaveNumber { get; private set; } = -1;
+    public event EventHandler onNewAttackStart;
+    public event EventHandler onNewSetupStart;
     private bool enemiesSpawned = false;
     private phaseType currentPhaseType;
     public Transform enemyHolder;
@@ -103,12 +106,14 @@ public class WaveController : MonoBehaviour
         {
             finalWaveSpawned = true;
         }
-        Debug.Log("WaveNumber: " + WaveNumber);
+        //Debug.Log("WaveNumber: " + WaveNumber);
     }
 
     private IEnumerator CompleteSetupPhase(int setupIndex)
     {
         currentPhaseType = phaseType.SETUP;
+        //Debug.Log("onNewSetupStart invocation"); ;
+        onNewSetupStart?.Invoke(this, EventArgs.Empty);
         float setupDuration = setupTimes[setupIndex];
         
         const float skipCheckInterval = 0.5f;
@@ -140,8 +145,10 @@ public class WaveController : MonoBehaviour
     private IEnumerator BeginActivePhase(int waveNumber)
     {
         currentPhaseType = phaseType.ACTIVE;
+        //Debug.Log("onNewAttackStart invocation");
+        onNewAttackStart?.Invoke(this, EventArgs.Empty);
         // For all spawn groups in a wave
-        for(int g = 0; g < waves[waveNumber].spawnGroups.Length; g++)
+        for (int g = 0; g < waves[waveNumber].spawnGroups.Length; g++)
         {
             SpawnGroupObject currentGroup = waves[waveNumber].spawnGroups[g];
             // For all enemies in a spawn group

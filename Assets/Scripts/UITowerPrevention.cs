@@ -30,7 +30,7 @@ public class UITowerPrevention : MonoBehaviour
 
         MouseOnUI = true;
 
-        Debug.Log("On build-free UI");
+        //Debug.Log("On build-free UI");
     }
 
     // To be called when the mouse exits a UI object containing this script instance.
@@ -45,7 +45,7 @@ public class UITowerPrevention : MonoBehaviour
             BuildManager.instance.SetCondition(0);
 
             MouseOnUI = false;
-            Debug.Log("Off build-free UI");
+            //Debug.Log("Off build-free UI");
         }    
     }
 

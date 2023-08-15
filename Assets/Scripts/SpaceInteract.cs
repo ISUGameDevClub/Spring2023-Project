@@ -58,13 +58,13 @@ public class SpaceInteract : MonoBehaviour
     {
         BuildManager.instance.SetCondition(1);
 
-        Debug.Log("On Tower");
+        //Debug.Log("On Tower");
     }
 
     void OnMouseExit ()
     {
         BuildManager.instance.SetCondition(0);
 
-        Debug.Log("Not on Tower");
+        //Debug.Log("Not on Tower");
     }
 }

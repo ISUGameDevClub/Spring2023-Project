@@ -35,7 +35,8 @@ public class EnemyMeleeAttackManager : MonoBehaviour
     private IEnumerator AttackEntity()
     {
         attackCoroutineRunning = true;
-
+        // Added this statement to ensure that any destroyed/out-of-range objects are removed from the collidersInside array.
+        yield return new WaitForFixedUpdate();
         //sorts all of the objects in the array in order by distance.
         var target = this.GetComponentInChildren<EnemyAttackRangeCollider>().collidersInside.OrderBy(go => (transform.position - go.transform.position).sqrMagnitude).ToList();
         if (target.Any(item => item.tag == "Tower"))

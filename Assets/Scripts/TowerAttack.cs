@@ -63,6 +63,8 @@ public class TowerAttack : MonoBehaviour
     private IEnumerator AttackEntity()
     {
         attackCoroutineRunning = true;
+        // To ensure that any colliders that have been destroyed/need to be removed are removed before being sorted.
+        yield return new WaitForFixedUpdate();
         //sorts all of the objects in the array in order by distance.
         var target = collidersInside.OrderBy(go => (transform.position - go.transform.position).sqrMagnitude).ToList();
         //Debug.Log(towerType);

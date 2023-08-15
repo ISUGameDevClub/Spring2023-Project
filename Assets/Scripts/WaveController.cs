@@ -178,9 +178,14 @@ public class WaveController : MonoBehaviour
         StartCoroutine(beginNextWave());
     }
 
+
+    // Used to prevent multiple calls to change the scene and play the victory theme.
+    private bool shouldReturn = false;
+
     // Update is called once per frame
     void Update()
     {
+        if (shouldReturn) return;
         // When the last wave has ended, which is when all enemies have died, begin the next wave.
         // This could potentially/should be changed in the future, I'm checking if all enemies are dead by counting the children of an enemyHolder transform.
         if (enemyHolder.childCount == 0 && enemiesSpawned && !finalWaveSpawned)
@@ -191,6 +196,7 @@ public class WaveController : MonoBehaviour
         else if (finalWaveSpawned && enemyHolder.childCount == 0)   
         {
             // In this case, the last wave has finished. // Temporary measure for the GameShowcaseDemo.
+            shouldReturn = true;
             FindObjectOfType<TransitionController>().FadeToLevel(winScene);
             FindObjectOfType<AudioManager>()?.Play("VictoryTheme");
         }
